@@ -1,0 +1,53 @@
+// Base
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+#root,
+.wrapper,
+.page,
+.authComponent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  padding: 18px 0;
+  width: 100%;
+  height: 60px;
+  font-size: 13px;
+  color: #666;
+  border-top: 1px solid #eee;
+
+  a {
+    margin-left: .5ch;
+
+    &:first-child {
+      margin-right: .5ch;
+    }
+  }
+}
