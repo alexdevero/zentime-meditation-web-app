@@ -1,5 +1,5 @@
-import { observable, action } from "mobx";
-import axios from "axios";
+import { observable, action } from 'mobx';
+import axios from 'axios';
 
 export default class AppState {
   @observable authenticated;
@@ -15,7 +15,7 @@ export default class AppState {
     this.items = [];
     this.item = {};
 
-    this.testval = "Cobbled together by ";
+    this.testval = 'Created by ';
   }
 
   async fetchData(pathname, id) {

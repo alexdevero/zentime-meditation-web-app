@@ -70,17 +70,13 @@ export default class App extends Component {
 
 				<footer>
 					{testval}
-					<a href='https://twitter.com/mhaagens' target='_blank'>
-						@mhaagens
-					</a>
+					<a href='https://twitter.com/alexdevero' target='_blank'>@alexdevero</a>
 
 					{' '}
 					| github:
 					{' '}
 
-					<a href='https://github.com/mhaagens' target='_blank'>
-						mhaagens
-					</a>
+					<a href='https://github.com/alexdevero' target='_blank'>alexdevero</a>
 				</footer>
 			</div>
 		);

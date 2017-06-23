@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { inject, observer } from "mobx-react";
-import { Match, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
+import { Match, Link } from 'react-router-dom';
 
-import Protected from "./Protected";
-import DataWrapper from "./DataWrapper";
+import Protected from './Protected';
+import DataWrapper from './DataWrapper';
 
 @Protected
 @DataWrapper
@@ -18,10 +18,10 @@ export default class SubPage extends Component {
 		const { items } = this.store.appState;
 
 		return (
-			<div className="page posts">
+			<div className='page posts'>
 				<h1>Posts</h1>
 
-				<p className="subheader">
+				<p className='subheader'>
 					Posts are fetched from jsonplaceholder.typicode.com
 				</p>
 
@@ -42,7 +42,7 @@ export default class SubPage extends Component {
 									</li>
 								);
 							})
-						: "Loading..."}
+						: 'Loading...'}
 				</ul>
 			</div>
 		);

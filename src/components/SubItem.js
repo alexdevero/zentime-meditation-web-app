@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { inject, observer } from "mobx-react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
+import { Link } from 'react-router-dom';
 
-import DataWrapper from "./DataWrapper";
-import Protected from "./Protected";
+import DataWrapper from './DataWrapper';
+import Protected from './Protected';
 
 @DataWrapper
 @Protected
@@ -18,8 +18,8 @@ export default class Subitem extends Component {
 		const { item } = this.store.appState;
 
 		return (
-			<div className="page post">
-				<Link to="/posts">← Back to Posts</Link>
+			<div className='page post'>
+				<Link to='/posts'>← Back to Posts</Link>
 				{!!item &&
 					<article>
 						<h1>{item.title}</h1>
