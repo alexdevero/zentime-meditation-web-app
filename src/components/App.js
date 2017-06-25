@@ -14,14 +14,17 @@ export default class App extends Component {
 
 		this.store = this.props.store;
 	}
+
 	componentDidMount() {
 		this.authenticate();
 	}
+
 	authenticate(e) {
 		if (e) e.preventDefault();
 
 		this.store.appState.authenticate();
 	}
+
 	render() {
 		const {
 			authenticated,
@@ -65,6 +68,14 @@ export default class App extends Component {
 					path='/login'
 					render={props => (
 						<LazyRoute {...props} component={import('./Login')} />
+					)}
+				/>
+
+				<Route
+					exact
+					path='/session'
+					render={props => (
+						<LazyRoute {...props} component={import('./session')} />
 					)}
 				/>
 
