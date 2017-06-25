@@ -13,7 +13,7 @@ html {
 
 body {
   color: #666;
-  line-height: 1.333;
+  line-height: 1.416;
 }
 
 h1 {
@@ -40,15 +40,15 @@ small,
 }
 
 a {
-  color: rgba(#000, .9);
   text-decoration: none;
+  color: #333;
   cursor: pointer;
 
   &:hover {
-    color: rgba(#000, 1);
+    color: rgba(map-get($colors, blue), .75);
   }
 
   &.active {
-    color: rgba(#000, 1);
+    color: rgba(map-get($colors, blue), .5);
   }
 }
