@@ -19,10 +19,10 @@ export default class SubPage extends Component {
 
 		return (
 			<div className='page posts'>
-				<h1>Posts</h1>
+				<h1>Presets</h1>
 
 				<p className='subheader'>
-					Posts are fetched from jsonplaceholder.typicode.com
+					Some presets you can use to start your meditation session.
 				</p>
 
 				<hr />

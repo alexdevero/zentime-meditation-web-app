@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react';
 import LazyRoute from 'lazy-route';
 import DevTools from 'mobx-react-devtools';
 
-import TopBar from './TopBar';
+import Header from './Header';
 
 @inject('store', 'routing')
 @observer
@@ -34,7 +34,7 @@ export default class App extends Component {
 		return (
 			<div className='wrapper'>
 				{/*<DevTools />*/}
-				<TopBar location={this.props.routing.location} />
+				<Header location={this.props.routing.location} />
 
 				<Route
 					exact
