@@ -1,9 +1,9 @@
-.topbar nav {
+.nav {
   display: flex;
   flex: 1;
 
   a {
-    margin-right: 24px;
+    margin-right: remy(24px);
     font-weight: 500;
     color: rgba(#000, .5);
 

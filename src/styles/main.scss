@@ -4,7 +4,7 @@
 @import '_config/variables';
 
 // Tools
-// @import '_tools/functions';
+@import '_tools/functions';
 // @import '_tools/mixins';
 
 // Base
@@ -13,8 +13,8 @@
 @import 'base/typography';
 
 // Components
-@import 'components/topbar';
-@import 'components/topnav';
+@import 'components/header';
+@import 'components/nav';
 @import 'components/page';
 
 // Pages

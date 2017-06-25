@@ -1,0 +1,13 @@
+// Mixins
+
+// Transition mixin
+@mixin transition($prop: all, $duration: .25s, $timing: cubic-bezier(.4, 0, 1, 1)) {
+  transition: $prop $duration $timing;
+}
+
+// Vertical centering mixin
+@mixin vertical-center($position: absolute) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}

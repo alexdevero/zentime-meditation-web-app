@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link, withRouter } from 'react-router-dom';
 
-import TopNav from './TopNav';
 import Button from './ui/Button';
+import Nav from './Nav';
 
 // @withRouter
 @inject('store')
 @observer
-export default class TopBar extends Component {
+export default class Header extends Component {
 	constructor(props) {
 		super(props);
 
@@ -27,14 +27,11 @@ export default class TopBar extends Component {
 		const { authenticated } = this.store;
 
 		return (
-			<div className='topbar'>
-				<TopNav location={this.props.location} />
+			<header className='header'>
+				<Nav location={this.props.location} />
 
-				<Button
-					onClick={this.authenticate.bind(this)}
-					title={authenticated ? 'Log out' : 'Sign in'}
-				/>
-			</div>
+        <a onClick={this.authenticate.bind(this)}>{authenticated ? 'Log out' : 'Sign in'}</a>
+			</header>
 		);
 	}
 }

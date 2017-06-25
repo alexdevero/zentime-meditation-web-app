@@ -5,7 +5,7 @@ import ActiveLink from './ui/Activelink';
 
 @inject('store')
 @observer
-export default class TopNav extends Component {
+export default class Nav extends Component {
 	constructor(props) {
 		super(props);
 
@@ -22,10 +22,10 @@ export default class TopNav extends Component {
 		const { authenticated, authenticating } = this.store;
 
 		return (
-			<nav>
+			<nav className='nav'>
 				<ActiveLink activeOnlyWhenExact={true} to='/'>Home</ActiveLink>
 
-				{authenticated && <ActiveLink to='/posts'>Posts</ActiveLink>}
+				{authenticated && <ActiveLink to='/posts'>Presets</ActiveLink>}
 			</nav>
 		);
 	}
