@@ -7,6 +7,12 @@ export default class AppState {
   @observable items;
   @observable item;
 
+  @observable timerIsFinished;
+  @observable timerIsRunning;
+  @observable timerHours;
+  @observable timerMinutes;
+  @observable timerSecodns;
+
   @observable testval;
 
   constructor() {
@@ -14,6 +20,12 @@ export default class AppState {
     this.authenticating = false;
     this.items = [];
     this.item = {};
+
+    this.timerIsFinished = false;
+    this.timerIsRunning = false;
+    this.timerHours = 0;
+    this.timerMinutes = 0;
+    this.timerSecodns = 0;
 
     this.testval = 'Created by ';
   }
