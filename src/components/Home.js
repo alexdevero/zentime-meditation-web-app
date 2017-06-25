@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import { Link } from 'react-router-dom';
 
 @inject('store')
 @observer
@@ -26,21 +27,9 @@ export default class Home extends Component {
   					<div className='hero__content'>
   						<h4>A simple meditation timer to help you practice meditation.</h4>
 
-              <a>Let's start your first session!</a>
+              <Link to='/session'>Give it a try and start your first session!</Link>
   					</div>
   				</div>
-
-					<div className='home__features'>
-						<h4>Main features:</h4>
-
-						<ul>
-							<li>✓ Simple to set up</li>
-
-							<li>✓ No clutter</li>
-
-							<li>✓ Ready-to-use presets</li>
-						</ul>
-					</div>
 				</main>
 			</div>
 		);

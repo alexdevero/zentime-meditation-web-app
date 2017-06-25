@@ -30,24 +30,3 @@ body {
   flex-direction: column;
   flex: 1;
 }
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 1 auto;
-  padding: remy(18px) 0;
-  width: 100%;
-  height: remy(60px);
-  font-size: remy(13px);
-  color: #666;
-  border-top: 1px solid #eee;
-
-  a {
-    margin-left: .5ch;
-
-    &:first-child {
-      margin-right: .5ch;
-    }
-  }
-}
