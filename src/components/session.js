@@ -8,10 +8,6 @@ export default class Session extends Component {
 	constructor(props) {
 		super(props);
 
-    this.state = {
-      time: {},
-      seconds: 5
-    };
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
@@ -33,27 +29,70 @@ export default class Session extends Component {
       'm': minutes,
       's': seconds
     };
+
     return obj;
   }
 
   startTimer() {
     if (this.timer === 0) {
+      this.store.appState.timerIsRunning = true;
       this.timer = setInterval(this.countDown, 1000);
     }
   }
 
+  decreaseHours() {
+    this.store.appState.timerHours = this.store.appState.timerHours - 1;
+
+    this.store.appState.timerMinutes = this.store.appState.timerMinutes + 60;
+  }
+
+  decreaseMinutes() {
+    this.store.appState.timerMinutes = this.store.appState.timerMinutes - 1;
+
+    this.store.appState.timerSeconds = this.store.appState.timerSeconds + 60;
+  }
+
   countDown() {
     // Remove one second, set state so a re-render happens.
-    let seconds = this.state.seconds - 1;
+    let seconds = this.store.appState.timerSeconds - 1;// this.state.seconds - 1;
 
-    this.setState({
-      time: this.secondsToTime(seconds),
-      seconds: seconds,
-    });
+    this.store.appState.time = this.secondsToTime(seconds);
+    this.store.appState.timerSeconds = seconds;
 
     // Check if we're at zero.
-    if (this.state.seconds === 0) {
-      clearInterval(this.timer);
+    if (this.store.appState.timerSeconds === 0) {
+      // Check if there are any minutes remaining
+      if (this.store.appState.timerMinutes > 0) {
+        this.decreaseMinutes();
+        // this.store.appState.timerMinutes = this.store.appState.timerMinutes - 1;
+
+        // this.store.appState.timerSeconds = this.store.appState.timerSeconds + 60;
+      } else {
+        // Check if there are any hours remaining
+        if (this.store.appState.timerHours > 0) {
+          this.decreaseHours();
+          // this.store.appState.timerHours = this.store.appState.timerHours - 1; // Decrease the hours by one
+
+          // this.store.appState.timerMinutes = this.store.appState.timerMinutes + 60; // Add 60 minutes to minutes
+
+          if (this.store.appState.timerMinutes > 0) {
+            this.decreaseMinutes();
+            // this.store.appState.timerMinutes = this.store.appState.timerMinutes - 1;
+
+            // this.store.appState.timerSeconds = this.store.appState.timerSeconds + 60;
+            // this.countDown();
+          }
+        }
+      }
+
+      if (this.store.appState.timerSeconds === 0) {
+        clearInterval(this.timer);
+
+        this.store.appState.timerIsFinished = true;
+        this.store.appState.timerIsRunning = false;
+
+        console.log('timer is finished: ' + this.store.appState.timerIsFinished);
+      }
     }
   }
 
@@ -66,7 +105,7 @@ export default class Session extends Component {
   				<div className='home__hero'>
 						<h4>Set the duration of your session.</h4>
 
-            <div>m: {this.state.time.m} s: {this.state.time.s}</div>
+            <div>h: {this.store.appState.timerHours} m: {this.store.appState.timerMinutes} s: {this.store.appState.timerSeconds}</div>
 
             <div>
               <button onClick={this.startTimer}>Start</button>
