@@ -1,16 +1,19 @@
 // Main SASS file
 
-// Config
-@import '_config/variables';
-
 // Tools
 @import '_tools/functions';
-// @import '_tools/mixins';
+@import '_tools/mixins';
+
+// Config
+@import '_config/variables';
 
 // Base
 @import 'base/reset';
 @import 'base/base';
 @import 'base/typography';
+
+// Atoms
+@import 'atoms/buttons';
 
 // Components
 @import 'components/header';
