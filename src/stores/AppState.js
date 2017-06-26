@@ -7,11 +7,13 @@ export default class AppState {
   @observable items;
   @observable item;
 
+  // Observables for timer
+  @observable time;
   @observable timerIsFinished;
   @observable timerIsRunning;
   @observable timerHours;
   @observable timerMinutes;
-  @observable timerSecodns;
+  @observable timerSeconds;
 
   @observable testval;
 
@@ -21,11 +23,13 @@ export default class AppState {
     this.items = [];
     this.item = {};
 
+    // Variables for timer
+    this.time = {};
     this.timerIsFinished = false;
     this.timerIsRunning = false;
-    this.timerHours = 0;
-    this.timerMinutes = 0;
-    this.timerSecodns = 0;
+    this.timerHours = 1;
+    this.timerMinutes = 1;
+    this.timerSeconds = 5;
 
     this.testval = 'Created by ';
   }
