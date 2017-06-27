@@ -11,6 +11,7 @@ export default class AppState {
   @observable time;
   @observable timerIsFinished;
   @observable timerIsRunning;
+  @observable timerIsStopped;
   @observable timerHours;
   @observable timerMinutes;
   @observable timerSeconds;
@@ -27,6 +28,7 @@ export default class AppState {
     this.time = {};
     this.timerIsFinished = false;
     this.timerIsRunning = false;
+    this.timerIsStopped = false;
     this.timerHours = 1;
     this.timerMinutes = 1;
     this.timerSeconds = 5;
