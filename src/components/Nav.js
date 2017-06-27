@@ -25,7 +25,9 @@ export default class Nav extends Component {
 			<nav className='nav'>
 				<ActiveLink activeOnlyWhenExact={true} to='/'>Home</ActiveLink>
 
-				{authenticated && <ActiveLink to='/posts'>Presets</ActiveLink>}
+				<ActiveLink activeOnlyWhenExact={true} to='/about'>About</ActiveLink>
+
+				{/* {authenticated && <ActiveLink to='/posts'>Presets</ActiveLink>} */}
 			</nav>
 		);
 	}

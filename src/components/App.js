@@ -47,11 +47,19 @@ export default class App extends Component {
 					)}
 				/>
 
-				<Route
+				{/* <Route
 					exact
 					path='/posts'
 					render={props => (
 						<LazyRoute {...props} component={import('./SubPage')} />
+					)}
+				/> */}
+
+				<Route
+					exact
+					path='/about'
+					render={props => (
+						<LazyRoute {...props} component={import('./About')} />
 					)}
 				/>
 
