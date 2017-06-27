@@ -29,10 +29,6 @@
     color: rgba(#000, .5);
   }
 
-  a {
-    color: map-get($colors, blue);
-  }
-
   @media screen and (max-width: 768px) {
     padding: remy(24px);
     text-align: center;
@@ -41,6 +37,10 @@
       font-size: 6vmax;
     }
   }
+}
+
+.home-cta {
+  color: map-get($colors, blue);
 }
 
 .hero__logo {
