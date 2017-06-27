@@ -2,7 +2,7 @@
 
 .btn {
   display: inline-block;
-  padding: remy(8px) remy(18px);
+  padding: remy(8px) remy(18px) remy(10px);
   font-size: remy(16px);
   font-weight: 400;
   line-height: 1.25;
@@ -14,15 +14,57 @@
   cursor: pointer;
   user-select: none;
 
+  @include box-shadow(2);
   @include transition(all);
 
-  &--primary {
-    color: #fff;
-    background: map-get($colors, blue);
+  &:focus {
+    outline: 0;
+  }
 
-    &:focus,
-    &:hover {
-      background: darken(map-get($colors, blue), 11%);
+  &:focus,
+  &:hover {
+    @include box-shadow(3);
+  }
+
+  &--danger {
+    &,
+    &:not([href]):not([tabindex]) {
+      color: #fff;
+      background: map-get($colors, red);
+
+      &:focus,
+      &:hover {
+        color: #fff;
+        // background: darken(map-get($colors, green), 11%);
+      }
+    }
+  }
+
+  &--primary {
+    &,
+    &:not([href]):not([tabindex]) {
+      color: #fff;
+      background: map-get($colors, blue);
+
+      &:focus,
+      &:hover {
+        color: #fff;
+        background: map-get($colors, blue-light);
+      }
+    }
+  }
+
+  &--secondary {
+    &,
+    &:not([href]):not([tabindex]) {
+      color: #fff;
+      background: map-get($colors, green);
+
+      &:focus,
+      &:hover {
+        color: #fff;
+        // background: darken(map-get($colors, green), 11%);
+      }
     }
   }
 }
