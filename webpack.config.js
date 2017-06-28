@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://0.0.0.0:3000',
+    'webpack-dev-server/client?http://0.0.0.0:1337',
     'webpack/hot/only-dev-server',
     'babel-polyfill',
     'whatwg-fetch',
@@ -14,7 +14,7 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, 'dist'),
-    port: 3000,
+    port: 1337,
     host: '0.0.0.0',
     publicPath: '/',
     historyApiFallback: true,

@@ -5,7 +5,7 @@ Simple meditation timer web app based on [react-mobx-react-router4-boilerplate](
 ```
 npm install
 npm start
-open http://localhost:3000
+open http://localhost:1337
 ```
 
 ### Preview the minified production bundle.
