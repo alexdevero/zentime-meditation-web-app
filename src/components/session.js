@@ -53,52 +53,49 @@ export default class Session extends Component {
   decreaseHours() {
     this.store.appState.timerHours = this.store.appState.timerHours - 1;
 
-    this.store.appState.timerMinutes = this.store.appState.timerMinutes + 60;
+    this.store.appState.timerMinutes = this.store.appState.timerMinutes + 2;
+    console.log('decrease hours');
   }
 
   decreaseMinutes() {
     this.store.appState.timerMinutes = this.store.appState.timerMinutes - 1;
 
-    this.store.appState.timerSeconds = this.store.appState.timerSeconds + 60;
+    this.store.appState.timerSeconds = this.store.appState.timerSeconds + 15;
+    console.log('decrease minutes');
   }
 
   countDown() {
-    // Remove one second, set state so a re-render happens.
-    let seconds = this.store.appState.timerSeconds - 1;// this.state.seconds - 1;
+    if (this.store.appState.timerHours > 0 || this.store.appState.timerMinutes > 0 || this.store.appState.timerSeconds > 0) {
+      if (this.store.appState.timerSeconds === 0) {
+        // If there are no seconds remaining
+        // Check if there are any minutes remaining
+        if (this.store.appState.timerMinutes > 0) {
+          this.decreaseMinutes();
 
-    this.store.appState.time = this.secondsToTime(seconds);
-    this.store.appState.timerSeconds = seconds;
-
-    // Check if we're at zero.
-    if (this.store.appState.timerSeconds === 0) {
-      // Check if there are any minutes remaining
-      if (this.store.appState.timerMinutes > 0) {
-        this.decreaseMinutes();
-
-        this.countDown();
-      } else {
-        // Check if there are any hours remaining
-        if (this.store.appState.timerHours > 0) {
+          this.countDown();
+        } else if (this.store.appState.timerHours > 0) {
+          // Check if there are any hours remaining
           this.decreaseHours();
 
           this.countDown();
-          if (this.store.appState.timerMinutes > 0) {
-            this.decreaseMinutes();
-
-            this.countDown();
-          }
         }
+      } else {
+        // If there is at least 1 second remaining
+        // Remove one second, set state so a re-render happens.
+        let seconds = this.store.appState.timerSeconds - 1;// this.state.seconds - 1;
+
+        this.store.appState.time = this.secondsToTime(seconds);
+        this.store.appState.timerSeconds = seconds;
       }
+    } else {
+      // Otherwise, reset countdown
+      clearInterval(this.timer);
 
-      if (this.store.appState.timerSeconds === 0) {
-        clearInterval(this.timer);
+      this.store.appState.timerIsFinished = true;
+      this.store.appState.timerIsRunning = false;
+      this.timer = 0;
 
-        this.store.appState.timerIsFinished = true;
-        this.store.appState.timerIsRunning = false;
-        this.timer = 0;
-
-        console.log('timer is finished: ' + this.store.appState.timerIsFinished);
-      }
+      console.log('timer is finished: ' + this.store.appState.timerIsFinished);
     }
   }
 
@@ -109,6 +106,7 @@ export default class Session extends Component {
     this.store.appState.timerIsFinished = false;
     this.store.appState.timerIsRunning = false;
     this.store.appState.timerIsStopped = false;
+    this.timer = 0;
 
     if (timerType.indexOf('hours') !== -1) {
       this.store.appState.timerHours = userInput;
@@ -135,11 +133,20 @@ export default class Session extends Component {
 						<h4>Set the duration of your session.</h4>
 
             <div className={classNames('session-timer form-inline', this.store.appState.timerIsRunning && 'hidden')}>
-              <Input value={/*this.formatTimerValues(*/this.store.appState.timerHours/*)*/} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-hours' type='text' />
+              <div className='session-timer__input'>
+                <Input value={this.store.appState.timerHours} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-hours' type='text' />
+                <label htmlFor='timer-hours'>h</label>
+              </div>
 
-              <Input value={/*this.formatTimerValues(*/this.store.appState.timerMinutes/*)*/} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-minutes' type='text' />
+              <div className='session-timer__input'>
+                <Input value={this.store.appState.timerMinutes} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-minutes' type='text' />
+                <label htmlFor='timer-minutes'>m</label>
+              </div>
 
-              <Input value={/*this.formatTimerValues(*/this.store.appState.timerSeconds/*)*/} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-seconds' type='text' />
+              <div className='session-timer__input'>
+                <Input value={this.store.appState.timerSeconds} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-seconds' type='text' />
+                <label htmlFor='timer-seconds'>s</label>
+              </div>
             </div>
 
             <div className={classNames('session-countdown', !this.store.appState.timerIsRunning && 'hidden')}>
