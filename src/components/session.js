@@ -15,6 +15,7 @@ export default class Session extends Component {
 
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
+    this.restartTimer = this.restartTimer.bind(this);
     this.countDown = this.countDown.bind(this);
 
 		this.store = this.props.store;
@@ -48,6 +49,12 @@ export default class Session extends Component {
 
       clearInterval(this.timer);
     }
+  }
+
+  restartTimer() {
+    this.store.appState.timerIsRunning = true;
+    this.store.appState.timerIsStopped = false;
+    this.timer = setInterval(this.countDown, 1000);
   }
 
   decreaseHours() {
@@ -123,6 +130,14 @@ export default class Session extends Component {
     }
   }
 
+  renderButtons() {
+    if (!this.store.appState.timerIsStopped) {
+      return <Button className={classNames('btn', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? 'Start session' : 'Pause session'} />
+    } else {
+      return <Button className='btn btn--primary' onClick={this.restartTimer} title='Continue' />
+    }
+  }
+
 	render() {
 		const store = this.store;
 
@@ -154,9 +169,7 @@ export default class Session extends Component {
             </div>
 
             <div>
-              {!this.store.appState.timerIsStopped && <Button className={classNames('btn', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning? 'Start session' : 'Stop session'} />}
-
-              {this.store.appState.timerIsStopped && <Button className='btn btn--primary' onClick={this.startTimer} title='Restart Timer' />}
+              {this.renderButtons()}
             </div>
   				</div>
 				</main>
