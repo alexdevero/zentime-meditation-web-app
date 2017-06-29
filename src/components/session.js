@@ -60,14 +60,14 @@ export default class Session extends Component {
   decreaseHours() {
     this.store.appState.timerHours = this.store.appState.timerHours - 1;
 
-    this.store.appState.timerMinutes = this.store.appState.timerMinutes + 2;
+    this.store.appState.timerMinutes = this.store.appState.timerMinutes + 60;
     console.log('decrease hours');
   }
 
   decreaseMinutes() {
     this.store.appState.timerMinutes = this.store.appState.timerMinutes - 1;
 
-    this.store.appState.timerSeconds = this.store.appState.timerSeconds + 15;
+    this.store.appState.timerSeconds = this.store.appState.timerSeconds + 60;
     console.log('decrease minutes');
   }
 
@@ -154,8 +154,10 @@ export default class Session extends Component {
               </div>
 
               <div className='session-timer__input'>
+                { ': ' }
                 <Input value={this.store.appState.timerMinutes} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-minutes' type='text' />
                 <label htmlFor='timer-minutes'>m</label>
+                { ' :' }
               </div>
 
               <div className='session-timer__input'>
@@ -165,7 +167,7 @@ export default class Session extends Component {
             </div>
 
             <div className={classNames('session-countdown', !this.store.appState.timerIsRunning && 'hidden')}>
-              {this.store.appState.timerHours} h : {this.store.appState.timerMinutes} m : {this.store.appState.timerSeconds} s
+              <span>{this.store.appState.timerHours}</span>h&nbsp;&nbsp;:<span>{this.store.appState.timerMinutes}</span>m&nbsp;&nbsp;: <span>{this.store.appState.timerSeconds}</span> s
             </div>
 
             <div>
