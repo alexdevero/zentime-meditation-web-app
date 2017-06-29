@@ -29,9 +29,9 @@ export default class AppState {
     this.timerIsFinished = false;
     this.timerIsRunning = false;
     this.timerIsStopped = false;
-    this.timerHours = 1;
-    this.timerMinutes = 1;
-    this.timerSeconds = 5;
+    this.timerHours = 0;
+    this.timerMinutes = 0;
+    this.timerSeconds = 0;
 
     this.testval = 'Created by ';
   }
