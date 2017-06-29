@@ -2,7 +2,7 @@
 
 .btn {
   display: inline-block;
-  padding: remy(8px) remy(18px) remy(10px);
+  padding: remy(8px) remy(18px) remy(9px);
   font-size: remy(16px);
   font-weight: 400;
   line-height: 1.25;
@@ -35,7 +35,7 @@
       &:focus,
       &:hover {
         color: #fff;
-        // background: darken(map-get($colors, green), 11%);
+        background: map-get($colors, red-light);
       }
     }
   }
@@ -63,7 +63,7 @@
       &:focus,
       &:hover {
         color: #fff;
-        // background: darken(map-get($colors, green), 11%);
+        background: map-get($colors, green-light);
       }
     }
   }
