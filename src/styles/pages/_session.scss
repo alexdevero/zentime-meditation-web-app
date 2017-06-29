@@ -12,4 +12,21 @@
     width: 100%;
     max-width: remy(960px);
   }
+
+  .session-timer__input label {
+    margin-left: remy(6px);
+    display: inline-block;
+  }
+}
+
+.session-countdown {
+  padding: remy(8px) 0;
+  margin: remy(18px) auto;
+
+  span {
+    display: inline-block;
+    width: 100%;
+    max-width: remy(30px);
+    text-align: center;
+  }
 }
