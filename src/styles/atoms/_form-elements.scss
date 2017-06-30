@@ -9,6 +9,10 @@ input,
   border-right: 0;
   border-left: 0;
   border-radius: 0;
+
+  &.has-error {
+    border-bottom-color: map-get($colors, red);
+  }
 }
 
 .form-inline {
