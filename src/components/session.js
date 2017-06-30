@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
+import classNames from 'classnames';
+
 import Button from './ui/Button';
 import Input from './ui/Input';
 
-import classNames from 'classnames';
+import bellSound from '../sounds/bell-tone.mp3';
 
 @inject('store')
 @observer
@@ -17,6 +19,8 @@ export default class Session extends Component {
     this.startTimer = this.startTimer.bind(this);
     this.restartTimer = this.restartTimer.bind(this);
     this.countDown = this.countDown.bind(this);
+
+    this.playBellSound = this.playBellSound.bind(this);
 
 		this.store = this.props.store;
 	}
@@ -95,15 +99,27 @@ export default class Session extends Component {
         this.store.appState.timerSeconds = seconds;
       }
     } else {
-      // Otherwise, reset countdown
+      // Otherwise, play bell sound
+      this.playBellSound()
+
+      // Reset countdown
       clearInterval(this.timer);
 
+      // Reset observables
       this.store.appState.timerIsFinished = true;
       this.store.appState.timerIsRunning = false;
       this.timer = 0;
 
       console.log('timer is finished: ' + this.store.appState.timerIsFinished);
     }
+  }
+
+  playBellSound() {
+    const bellSoundFile = new Audio(bellSound);
+
+    bellSoundFile.volume = 1; // 0.5 is half volume
+
+    bellSoundFile.play();
   }
 
   updateTimer(event) {
@@ -124,12 +140,6 @@ export default class Session extends Component {
     }
   }
 
-  formatTimerValues(value) {
-    if (value.toString().length === 1) {
-      return ('0' + value);
-    }
-  }
-
   renderButtons() {
     if (!this.store.appState.timerIsStopped) {
       return <Button className={classNames('btn', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? 'Start session' : 'Pause session'} />
@@ -143,26 +153,26 @@ export default class Session extends Component {
 
 		return (
 			<div className='page session'>
-				<main>
+				<main className='main--centered'>
   				<div className='home__hero'>
 						<h4>Set the duration of your session.</h4>
 
             <div className={classNames('session-timer form-inline', this.store.appState.timerIsRunning && 'hidden')}>
               <div className='session-timer__input'>
                 <Input value={this.store.appState.timerHours} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-hours' type='text' />
-                <label htmlFor='timer-hours'>h</label>
+                <label className='form-label' htmlFor='timer-hours'>h</label>
               </div>
 
               <div className='session-timer__input'>
                 { ': ' }
                 <Input value={this.store.appState.timerMinutes} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-minutes' type='text' />
-                <label htmlFor='timer-minutes'>m</label>
+                <label className='form-label' htmlFor='timer-minutes'>m</label>
                 { ' :' }
               </div>
 
               <div className='session-timer__input'>
                 <Input value={this.store.appState.timerSeconds} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-seconds' type='text' />
-                <label htmlFor='timer-seconds'>s</label>
+                <label className='form-label' htmlFor='timer-seconds'>s</label>
               </div>
             </div>
 
