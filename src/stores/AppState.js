@@ -16,6 +16,11 @@ export default class AppState {
   @observable timerMinutes;
   @observable timerSeconds;
 
+  // Observables for register
+  @observable registerPassword;
+  @observable registerUsername;
+  @observable passwordIsVisible;
+
   @observable testval;
 
   constructor() {
@@ -32,6 +37,11 @@ export default class AppState {
     this.timerHours = 0;
     this.timerMinutes = 0;
     this.timerSeconds = 0;
+
+    // Variables for register
+    this.registerPassword = '';
+    this.registerUsername = '';
+    this.passwordIsVisible = false;
 
     this.testval = 'Created by ';
   }
