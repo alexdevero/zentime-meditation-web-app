@@ -54,11 +54,14 @@
   margin-bottom: remy(24px);
   width: 100%;
   height: remy(96px);
-  background: url(lotus-flower.svg);
+  // background: url(lotus-flower.svg);
+  // background: url(lotus-flower-outline-colored.svg);
+  // background: url(yin-yang-symbol.svg);
+  background: url(lotus-flower-green.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: remy(96px) remy(96px);
-  opacity: .5;
+  background-size: remy(135px) remy(135px);
+  // opacity: .5;
 }
 
 .zentime-name {

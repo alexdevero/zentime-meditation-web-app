@@ -27,7 +27,7 @@ export default class Home extends Component {
   					<div className='hero__content'>
   						<h4>A simple meditation timer to help you practice meditation.</h4>
 
-              <Link className='home-cta' to='/session'>Give it a try and start your first session!</Link>
+              Give it a try and <Link className='home-cta' to='/session'>start your first session!</Link>
   					</div>
   				</div>
 				</main>
