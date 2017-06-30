@@ -104,6 +104,12 @@ export default class App extends Component {
 					{' '}
 
 					<a href='https://github.com/alexdevero' target='_blank'>alexdevero</a>
+
+					{' '}
+					| app repository:
+					{' '}
+
+					<a href='https://github.com/alexdevero/zentime-meditation-web-app' target='_blank'>ZenTime</a>
 				</footer>
 			</div>
 		);
