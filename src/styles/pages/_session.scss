@@ -1,21 +1,26 @@
 // Session
 
 .session {
-  position: relative;
   min-height: remy(275px);
+}
 
-  main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: remy(960px);
+.session-timer {
+  margin: remy(18px) auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  max-width: remy(480px);
+
+  input {
+    max-width: remy(30px);
+    text-align: center;
   }
+}
 
-  .session-timer__input label {
-    margin-left: remy(6px);
-    display: inline-block;
+.session-timer__input {
+  &:nth-of-type(2) {
+    margin-right: remy(8px);
+    margin-left: remy(8px);
   }
 }
 
