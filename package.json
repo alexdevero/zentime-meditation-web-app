@@ -8,11 +8,10 @@
     "npm": "5.x"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js",
-    "build": "NODE_ENV=production && rimraf ./dist && webpack --config webpack.config.production.js",
-    "postinstall": "NODE_ENV=production node_modules/.bin/webpack",
-    "preview": "http-server ./dist -p 1234 -c-1",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "set NODE_ENV=development && webpack-dev-server --config webpack.config.js",
+    "build": "set NODE_ENV=production && rimraf ./dist && webpack --config webpack.config.production.js",
+    "preview": "set NODE_ENV=preview http-server ./dist -p 1234 -c-1",
+    "test": "set NODE_ENV=test && echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
