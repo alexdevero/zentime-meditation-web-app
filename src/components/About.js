@@ -22,7 +22,7 @@ export default class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-8 push-md-2">
-                <h1 className='h3 text--light'>13 Reasons why is meditation good for you</h1>
+                <h1 className='h3 text--light mt-4'>13 Reasons why is meditation good for you</h1>
 
                 <p>Even though the academic research on mindfulness meditation isn’t as robust as, say, nutrition or exercise, there is a reason why it’s been around for thousands of years. And we’re starting to get a better understanding of why it seems to be beneficial for many aspects of life, from disease and pain management, to sleep, to control of emotions. Here are 13 biggest reasons why you might want to consider trying meditation on your own.</p>
 
