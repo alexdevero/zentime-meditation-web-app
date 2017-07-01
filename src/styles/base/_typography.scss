@@ -16,6 +16,19 @@ body {
   line-height: 1.416;
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: 'Roboto Slab', serif;
+}
+
 h1 {
   margin-top: 0;
   font-size: 3.998em;
@@ -32,6 +45,10 @@ h3 {
 
 h4 {
   font-size: 1.414em;
+}
+
+p {
+  font-weight: 300;
 }
 
 small,
