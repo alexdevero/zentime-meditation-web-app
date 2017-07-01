@@ -1,17 +1,7 @@
 // Homepage
 
 .home {
-  position: relative;
   min-height: remy(275px);
-
-  main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: remy(960px);
-  }
 }
 
 .home__hero {
@@ -25,14 +15,12 @@
 
   h4 {
     margin-bottom: remy(10px);
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: rgba(#000, .5);
   }
 
   @media screen and (max-width: 768px) {
-    padding: remy(24px);
-    text-align: center;
-
     h1 {
       font-size: 6vmax;
     }
