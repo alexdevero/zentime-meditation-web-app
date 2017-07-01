@@ -43,10 +43,10 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
-            'postcss-loader',
-            'resolve-url-loader',
-            'sass-loader?sourceMap'
+            { loader: 'css-loader', options: { sourceMap: true } },
+            { loader: 'postcss-loader', options: { sourceMap: true } },
+            { loader: 'resolve-url-loader' },
+            { loader: 'sass-loader', options: { sourceMap: true } }
           ]
         })
       },
