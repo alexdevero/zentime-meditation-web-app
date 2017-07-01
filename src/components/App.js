@@ -41,7 +41,7 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/'
+					path='/' // for production: /labs/zentime/
 					render={props => (
 						<LazyRoute {...props} component={import('./Home')} />
 					)}
@@ -49,7 +49,7 @@ export default class App extends Component {
 
 				{/* <Route
 					exact
-					path='/posts'
+					path='/posts' // for production: /labs/zentime/posts
 					render={props => (
 						<LazyRoute {...props} component={import('./SubPage')} />
 					)}
@@ -57,7 +57,7 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/about'
+					path='/about' // for production: /labs/zentime/about
 					render={props => (
 						<LazyRoute {...props} component={import('./About')} />
 					)}
@@ -65,7 +65,7 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/register'
+					path='/register' // for production: /labs/zentime/register
 					render={props => (
 						<LazyRoute {...props} component={import('./Register')} />
 					)}
@@ -73,7 +73,7 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/posts/:id'
+					path='/posts/:id' // for production: /labs/zentime/posts/:id
 					render={props => (
 						<LazyRoute {...props} component={import('./SubItem')} />
 					)}
@@ -81,7 +81,7 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/login'
+					path='/login' // for production: /labs/zentime/login
 					render={props => (
 						<LazyRoute {...props} component={import('./Login')} />
 					)}
@@ -89,7 +89,7 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/session'
+					path='/session' // for production: /labs/zentime/session
 					render={props => (
 						<LazyRoute {...props} component={import('./session')} />
 					)}

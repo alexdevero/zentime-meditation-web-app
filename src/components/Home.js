@@ -28,7 +28,7 @@ export default class Home extends Component {
   						<h4>A simple meditation timer to help you practice meditation.</h4>
 
               <p>
-                Give it a try and <Link className='home-cta' to='/session'>start your first session!</Link>
+                Give it a try and <Link className='home-cta' to='/session'>start your first session!</Link> {/* for prodution use to='/labs/zentime/session' */}
               </p>
   					</div>
   				</div>

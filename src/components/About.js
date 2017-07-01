@@ -107,7 +107,7 @@ export default class Home extends Component {
                 <p>The simple difference between those who meditate and those who do not, is that for a meditative mind the thought occurs but is witnessed, while for an ordinary mind, the thought occurs and is the boss. So in both minds, an upsetting thought can occur, but for those who meditate it is just another thought, which is seen as such and is allowed to blossom and die, while in the ordinary mind the thought instigates a storm which rages on and on.</p>
 
                 <p className='text-center'>
-                  <Link className='btn btn--primary mt-4 text-center' to='/session' title='Start your first session'>Start your first session</Link>
+                  <Link className='btn btn--primary mt-4 text-center' to='/session' title='Start your first session'>Start your first session</Link> {/* for prodution use to='/labs/zentime/session' */}
                 </p>
               </div>
             </div>
