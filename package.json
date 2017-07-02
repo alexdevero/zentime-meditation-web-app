@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "engines": {
     "node": "8.x",
-    "npm": "5.x"
+    "npm": "5.x",
+    "yarn": "^0.27.5"
   },
   "scripts": {
     "start": "set NODE_ENV=development && webpack-dev-server --config webpack.config.js",
