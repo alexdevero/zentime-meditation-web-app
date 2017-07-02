@@ -11,7 +11,7 @@
   "scripts": {
     "start": "set NODE_ENV=development && webpack-dev-server --config webpack.config.js",
     "build": "set NODE_ENV=production && rimraf ./dist && webpack --config webpack.config.production.js",
-    "postinstall": "webpack -p --config ./webpack.config.production.js --display-error-details",
+    "postinstall": "webpack --config ./webpack.config.production.js --display-error-details",
     "preview": "set NODE_ENV=preview http-server ./dist -p 1234 -c-1",
     "test": "set NODE_ENV=test && echo \"Error: no test specified\" && exit 1"
   },
