@@ -22,6 +22,10 @@ export default class Session extends Component {
 
     this.playBellSound = this.playBellSound.bind(this);
 
+    this.usePresetFive = this.usePresetFive.bind(this);
+    this.usePresetTwentyFive = this.usePresetTwentyFive.bind(this);
+    this.usePresetFifty = this.usePresetFifty.bind(this);
+
 		this.store = this.props.store;
 	}
 
@@ -122,6 +126,53 @@ export default class Session extends Component {
     bellSoundFile.play();
   }
 
+  usePresetFive() {
+    console.log('Preset 5');
+
+    this.store.appState.timerHours = 0;
+    this.store.appState.timerMinutes = 5;
+    this.store.appState.timerSeconds = 0;
+
+    this.store.appState.timerIsFinished = false;
+    this.store.appState.timerIsRunning = false;
+    this.store.appState.timerIsStopped = false;
+    this.timer = 0;
+  }
+
+  usePresetTwentyFive() {
+    console.log('Preset 25');
+
+    this.store.appState.timerHours = 0;
+    this.store.appState.timerMinutes = 25;
+    this.store.appState.timerSeconds = 0;
+
+    this.store.appState.timerIsFinished = false;
+    this.store.appState.timerIsRunning = false;
+    this.store.appState.timerIsStopped = false;
+    this.timer = 0;
+  }
+
+  usePresetFifty() {
+    console.log('Preset 50');
+
+    this.store.appState.timerHours = 0;
+    this.store.appState.timerMinutes = 50;
+    this.store.appState.timerSeconds = 0;
+
+    this.store.appState.timerIsFinished = false;
+    this.store.appState.timerIsRunning = false;
+    this.store.appState.timerIsStopped = false;
+    this.timer = 0;
+  }
+
+  renderButtons() {
+    if (!this.store.appState.timerIsStopped) {
+      return <Button className={classNames('btn', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? 'Start session' : 'Pause session'} />
+    } else {
+      return <Button className='btn btn--primary' onClick={this.restartTimer} title='Continue' />
+    }
+  }
+
   updateTimer(event) {
     let timerType = event.target.name;
     let userInput = event.target.value;
@@ -140,14 +191,6 @@ export default class Session extends Component {
     }
   }
 
-  renderButtons() {
-    if (!this.store.appState.timerIsStopped) {
-      return <Button className={classNames('btn', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? 'Start session' : 'Pause session'} />
-    } else {
-      return <Button className='btn btn--primary' onClick={this.restartTimer} title='Continue' />
-    }
-  }
-
 	render() {
 		const store = this.store;
 
@@ -155,7 +198,17 @@ export default class Session extends Component {
 			<div className='page session'>
 				<main className='main--centered'>
   				<div className='home__hero'>
-						<h4>Set the duration of your session.</h4>
+						<h4 className='h4'>Set the duration of your session.</h4>
+
+            <h5 className='h6 mt-1 text--light'>You can also use one of these presets:</h5>
+
+            <ul className='session__presets list-unstyled text--light'>
+              <li><a onClick={this.usePresetFive}>5 mins</a></li>
+
+              <li><a onClick={this.usePresetTwentyFive}>25 mins</a></li>
+
+              <li><a onClick={this.usePresetFifty}>50 mins</a></li>
+            </ul>
 
             <div className={classNames('session-timer form-inline', this.store.appState.timerIsRunning && 'hidden')}>
               <div className='session-timer__input'>
@@ -164,10 +217,10 @@ export default class Session extends Component {
               </div>
 
               <div className='session-timer__input'>
-                { ': ' }
+                <span>:&nbsp;</span>
                 <Input value={this.store.appState.timerMinutes} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-minutes' type='text' />
                 <label className='form-label' htmlFor='timer-minutes'>m</label>
-                { ' :' }
+                <span>&nbsp;:</span>
               </div>
 
               <div className='session-timer__input'>
