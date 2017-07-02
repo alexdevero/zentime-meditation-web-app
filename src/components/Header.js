@@ -29,7 +29,7 @@ export default class Header extends Component {
 			<header className='header'>
 				<Nav location={this.props.location} />
 
-        <a onClick={this.authenticate.bind(this)}>{authenticated ? 'Log out' : 'Sign in'}</a>
+        {/* <a onClick={this.authenticate.bind(this)}>{authenticated ? 'Log out' : 'Sign in'}</a> */}
 			</header>
 		);
 	}
