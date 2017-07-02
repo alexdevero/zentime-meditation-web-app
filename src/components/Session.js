@@ -104,7 +104,7 @@ export default class Session extends Component {
       }
     } else {
       // Otherwise, play bell sound
-      this.playBellSound()
+      this.playBellSound();
 
       // Reset countdown
       clearInterval(this.timer);
@@ -230,7 +230,9 @@ export default class Session extends Component {
             </div>
 
             <div className={classNames('session-countdown', !this.store.appState.timerIsRunning && 'hidden')}>
-              <span>{this.store.appState.timerHours}</span>h&nbsp;&nbsp;:<span>{this.store.appState.timerMinutes}</span>m&nbsp;&nbsp;: <span>{this.store.appState.timerSeconds}</span> s
+              <span className='countdown__value'>{this.store.appState.timerHours} h<span>&nbsp;&nbsp;:</span></span>
+              <span className='countdown__value'>{this.store.appState.timerMinutes} m<span>&nbsp;&nbsp;:</span></span>
+              <span className='countdown__value'>{this.store.appState.timerSeconds} s</span>
             </div>
 
             <div>

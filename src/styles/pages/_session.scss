@@ -18,13 +18,13 @@
       position: relative;
 
       @media (max-width: 249px) {
-        margin-top: 16px;
-        margin-bottom: 16px;
+        margin-top: remy(16px);
+        margin-bottom: remy(16px);
       }
 
       @media (min-width: 250px) {
-        margin-right: 16px;
-        margin-left: 16px;
+        margin-right: remy(16px);
+        margin-left: remy(16px);
       }
 
       &:before,
@@ -45,21 +45,21 @@
 
       &:before {
         @media (max-width: 249px) {
-          top: -17px;
+          top: remy(-17px);
         }
 
         @media (min-width: 250px) {
-          left: -10px;
+          left: remy(-10px);
         }
       }
 
       &:after {
         @media (max-width: 249px) {
-          bottom: -17px;
+          bottom: remy(-17px);
         }
 
         @media (min-width: 250px) {
-          right: -10px;
+          right: remy(-10px);
         }
       }
     }
@@ -86,8 +86,8 @@
 .session-timer__input {
   &:nth-of-type(2) {
     @media (max-width: 249px) {
-      margin-top: 6px;
-      margin-bottom: 6px;
+      margin-top: remy(6px);
+      margin-bottom: remy(6px);
 
       span {
         display: none;
@@ -104,11 +104,33 @@
 .session-countdown {
   padding: remy(8px) 0;
   margin: remy(18px) auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-  span {
+  @media (max-width: 249px) {
+    flex-direction: column;
+  }
+
+  .countdown__value {
     display: inline-block;
     width: 100%;
-    max-width: remy(30px);
+    min-width: remy(30px);
     text-align: center;
+
+    @media (max-width: 249px) {
+      &:nth-of-type(2) {
+        margin-top: remy(10px);
+        margin-bottom: remy(10px);
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (min-width: 250px) {
+      max-width: remy(52px);
+    }
   }
 }
