@@ -91,7 +91,7 @@ export default class App extends Component {
 					exact
 					path='/session' // for production: /labs/zentime/session
 					render={props => (
-						<LazyRoute {...props} component={import('./session')} />
+						<LazyRoute {...props} component={import('./Session')} />
 					)}
 				/>
 
