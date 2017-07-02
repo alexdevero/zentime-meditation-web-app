@@ -9,7 +9,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
     'babel-polyfill',
     'whatwg-fetch',
-    './src/index'
+    './src/index.js'
   ],
   devServer: {
     hot: true,
