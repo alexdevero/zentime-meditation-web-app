@@ -5,18 +5,30 @@ footer {
   justify-content: center;
   align-items: center;
   flex: 0 1 auto;
+  flex-direction: column;
   padding: remy(18px) 0;
   width: 100%;
-  height: remy(60px);
   font-size: remy(13px);
   color: #666;
 
-  a {
-    margin-left: .5ch;
+  @media (min-width: 481px) {
+    flex-direction: row;
+    height: remy(60px);
+  }
 
-    &:first-child,
-    &:nth-of-type(2) {
-      margin-right: .5ch;
+  a {
+    @media (max-width: 480px) {
+      margin-top: remy(6px);
+      margin-bottom: remy(6px);
+    }
+
+    @media (min-width: 481px) {
+      margin-left: remy(4px);
+
+      &:first-child,
+      &:nth-of-type(2) {
+        margin-right: remy(4px);
+      }
     }
   }
 }

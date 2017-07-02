@@ -16,6 +16,11 @@ input,
 }
 
 .form-inline {
+  input,
+  .form-control {
+    display: inline-block;
+  }
+
   .form-label {
     margin-left: remy(6px);
     display: inline-block;
