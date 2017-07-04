@@ -165,9 +165,9 @@
 }
 
 .btn--round {
-  padding: 14px 0px;
-  width: 56px;
-  font-size: 21px;
+  padding: remy(14px) remy(0px);
+  width: remy(56px);
+  font-size: remy(21px);
 
   .fa-play {
     position: relative;
