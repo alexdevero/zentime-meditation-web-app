@@ -26,6 +26,12 @@
     @include box-shadow(3);
   }
 
+  &--round {
+    padding: remy(12px) 0;
+    width: remy(46px);
+    border-radius: 50%;
+  }
+
   &--danger {
     &,
     &:not([href]):not([tabindex]) {
