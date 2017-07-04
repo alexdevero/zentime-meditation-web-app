@@ -167,9 +167,9 @@ export default class Session extends Component {
 
   renderButtons() {
     if (!this.store.appState.timerIsStopped) {
-      return <Button className={classNames('btn', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? 'Start session' : 'Pause session'} />
+      return <Button className={classNames('btn btn--round', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? <span className='fa fa-play'></span> : <span className='fa fa-pause'></span>} />
     } else {
-      return <Button className='btn btn--primary' onClick={this.restartTimer} title='Continue' />
+      return <Button className='btn btn--round btn--primary' onClick={this.restartTimer} title={<span className='fa fa-play'></span>} />
     }
   }
 
@@ -198,17 +198,15 @@ export default class Session extends Component {
 			<div className='page session'>
 				<main className='main--centered'>
   				<div className='home__hero'>
-						<h4 className='h4'>Set the duration of your session.</h4>
+						<h4 className={classNames('h4', this.store.appState.timerIsRunning && 'hidden')}>Set the duration of your session.</h4>
 
-            <h5 className='h6 mt-1 text--light'>You can also use one of these presets:</h5>
-
-            <ul className='session__presets list-unstyled text--light'>
+            {/* <ul className='session__presets list-unstyled text--light'>
               <li><a onClick={this.usePresetFive}>5 mins</a></li>
 
               <li><a onClick={this.usePresetTwentyFive}>25 mins</a></li>
 
               <li><a onClick={this.usePresetFifty}>50 mins</a></li>
-            </ul>
+            </ul> */}
 
             <div className={classNames('session-timer form-inline', this.store.appState.timerIsRunning && 'hidden')}>
               <div className='session-timer__input'>
@@ -230,13 +228,31 @@ export default class Session extends Component {
             </div>
 
             <div className={classNames('session-countdown', !this.store.appState.timerIsRunning && 'hidden')}>
-              <span className='countdown__value'>{this.store.appState.timerHours} h<span>&nbsp;&nbsp;:</span></span>
-              <span className='countdown__value'>{this.store.appState.timerMinutes} m<span>&nbsp;&nbsp;:</span></span>
+              <span className='countdown__value'>{this.store.appState.timerHours} h<span className='countdown__divider'>:</span></span>
+              <span className='countdown__value'>{this.store.appState.timerMinutes} m<span className='countdown__divider'>:</span></span>
               <span className='countdown__value'>{this.store.appState.timerSeconds} s</span>
             </div>
 
             <div>
               {this.renderButtons()}
+            </div>
+
+            <div className={classNames('session__presets mt-5', this.store.appState.timerIsRunning && 'hidden')}>
+              <h5 className='h6 mt-1 text--light'>You can also use one of these presets:</h5>
+
+              <ul className='list-unstyled text--light'>
+                <li>
+                  <Button className='btn btn-primary' onClick={this.usePresetFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 5 mins</span>} />
+                </li>
+
+                <li>
+                  <Button className='btn btn-primary' onClick={this.usePresetTwentyFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 25 mins</span>} />
+                </li>
+
+                <li>
+                  <Button className='btn btn-primary' onClick={this.usePresetFifty} title={<span><span className='fa fa-bolt'></span> 50 mins</span>} />
+                </li>
+              </ul>
             </div>
   				</div>
 				</main>
