@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
+import Button from './ui/Button';
+
 @inject('store')
 @observer
 export default class Home extends Component {
@@ -27,9 +29,7 @@ export default class Home extends Component {
   					<div className='hero__content'>
   						<h4>A simple meditation timer to help you practice meditation.</h4>
 
-              <p>
-                Give it a try and <Link className='home-cta' to='/session'>start your first session!</Link> {/* for prodution use to='/labs/zentime/session' */}
-              </p>
+              <Link className='btn btn--primary mt-2' to='/session'>Start your session</Link> {/* for prodution use to='/labs/zentime/session' */}
   					</div>
   				</div>
 				</main>
