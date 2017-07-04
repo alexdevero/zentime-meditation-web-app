@@ -22,6 +22,12 @@ export default class AppState {
   @observable registerPassword;
   @observable registerUsername;
 
+  // Observables for presets
+  @observable presetSet;
+  @observable presetFiveSet;
+  @observable presetTwentyFiveSet;
+  @observable presetFiftySet;
+
   @observable testval;
 
   constructor() {
@@ -44,6 +50,12 @@ export default class AppState {
     this.passwordIsVisible = false;
     this.registerPassword = '';
     this.registerUsername = '';
+
+    // Variables for presets
+    this.presetSet = false;
+    this.presetFiveSet = false;
+    this.presetTwentyFiveSet = false;
+    this.presetFiftySet = false;
 
     this.testval = 'Created by ';
   }

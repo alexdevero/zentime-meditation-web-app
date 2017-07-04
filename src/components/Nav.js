@@ -28,7 +28,9 @@ export default class Nav extends Component {
 
 				<ActiveLink activeOnlyWhenExact={true} to='/why'>Why</ActiveLink>{/* for prodution use to='/labs/zentime/about' */}
 
-				<ActiveLink activeOnlyWhenExact={true} to='/how'>How</ActiveLink>{/* for prodution use to='/labs/zentime/howto' */}
+				<ActiveLink activeOnlyWhenExact={true} to='/how'>How</ActiveLink>{/* for prodution use to='/labs/zentime/how' */}
+
+				<ActiveLink activeOnlyWhenExact={true} to='/presets'>Presets</ActiveLink>{/* for prodution use to='/labs/zentime/presets' */}
 
 				{/* <ActiveLink activeOnlyWhenExact={true} to='/register'>Register</ActiveLink> */}
 

@@ -1,0 +1,75 @@
+// Presets
+
+.presets__presets {
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    // flex-direction: column;
+
+    // @media (max-width: 249px) {
+    //   flex-direction: column;
+    // }
+
+    @media (max-width: 419px) {
+      flex-direction: column;
+    }
+  }
+
+  li {
+    &:nth-of-type(2) {
+      // position: relative;
+
+      // @media (max-width: 249px) {
+      //   margin-top: remy(16px);
+      //   margin-bottom: remy(16px);
+      // }
+
+      @media (min-width: 420px) {
+        margin-right: remy(16px);
+        margin-left: remy(16px);
+      }
+
+      @media (max-width: 419px) {
+        margin-top: remy(16px);
+        margin-bottom: remy(16px);
+      }
+
+      // &:before,
+      // &:after {
+      //   position: absolute;
+      //
+      //   @media (max-width: 249px) {
+      //     right: 0;
+      //     left: 0;
+      //     content: '\2014';
+      //   }
+      //
+      //   @media (min-width: 250px) {
+      //     top: 0;
+      //     content: '|';
+      //   }
+      // }
+
+      // &:before {
+      //   @media (max-width: 249px) {
+      //     top: remy(-17px);
+      //   }
+      //
+      //   @media (min-width: 250px) {
+      //     left: remy(-10px);
+      //   }
+      // }
+      //
+      // &:after {
+      //   @media (max-width: 249px) {
+      //     bottom: remy(-17px);
+      //   }
+      //
+      //   @media (min-width: 250px) {
+      //     right: remy(-10px);
+      //   }
+      // }
+    }
+  }
+}

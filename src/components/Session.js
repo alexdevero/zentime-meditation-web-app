@@ -22,12 +22,16 @@ export default class Session extends Component {
 
     this.playBellSound = this.playBellSound.bind(this);
 
-    this.usePresetFive = this.usePresetFive.bind(this);
-    this.usePresetTwentyFive = this.usePresetTwentyFive.bind(this);
-    this.usePresetFifty = this.usePresetFifty.bind(this);
+    // this.usePresetFive = this.usePresetFive.bind(this);
+    // this.usePresetTwentyFive = this.usePresetTwentyFive.bind(this);
+    // this.usePresetFifty = this.usePresetFifty.bind(this);
 
 		this.store = this.props.store;
 	}
+
+  componentDidMount() {
+    console.log(`seconds: ${this.store.appState.timerSeconds}, minutes: ${this.store.appState.timerMinutes}, hours: ${this.store.appState.timerHours}`);
+  }
 
   secondsToTime(secs){
     let hours = Math.floor(secs / (60 * 60));
@@ -126,44 +130,44 @@ export default class Session extends Component {
     bellSoundFile.play();
   }
 
-  usePresetFive() {
-    console.log('Preset 5');
-
-    this.store.appState.timerHours = 0;
-    this.store.appState.timerMinutes = 5;
-    this.store.appState.timerSeconds = 0;
-
-    this.store.appState.timerIsFinished = false;
-    this.store.appState.timerIsRunning = false;
-    this.store.appState.timerIsStopped = false;
-    this.timer = 0;
-  }
-
-  usePresetTwentyFive() {
-    console.log('Preset 25');
-
-    this.store.appState.timerHours = 0;
-    this.store.appState.timerMinutes = 25;
-    this.store.appState.timerSeconds = 0;
-
-    this.store.appState.timerIsFinished = false;
-    this.store.appState.timerIsRunning = false;
-    this.store.appState.timerIsStopped = false;
-    this.timer = 0;
-  }
-
-  usePresetFifty() {
-    console.log('Preset 50');
-
-    this.store.appState.timerHours = 0;
-    this.store.appState.timerMinutes = 50;
-    this.store.appState.timerSeconds = 0;
-
-    this.store.appState.timerIsFinished = false;
-    this.store.appState.timerIsRunning = false;
-    this.store.appState.timerIsStopped = false;
-    this.timer = 0;
-  }
+  // usePresetFive() {
+  //   console.log('Preset 5');
+  //
+  //   this.store.appState.timerHours = 0;
+  //   this.store.appState.timerMinutes = 5;
+  //   this.store.appState.timerSeconds = 0;
+  //
+  //   this.store.appState.timerIsFinished = false;
+  //   this.store.appState.timerIsRunning = false;
+  //   this.store.appState.timerIsStopped = false;
+  //   this.timer = 0;
+  // }
+  //
+  // usePresetTwentyFive() {
+  //   console.log('Preset 25');
+  //
+  //   this.store.appState.timerHours = 0;
+  //   this.store.appState.timerMinutes = 25;
+  //   this.store.appState.timerSeconds = 0;
+  //
+  //   this.store.appState.timerIsFinished = false;
+  //   this.store.appState.timerIsRunning = false;
+  //   this.store.appState.timerIsStopped = false;
+  //   this.timer = 0;
+  // }
+  //
+  // usePresetFifty() {
+  //   console.log('Preset 50');
+  //
+  //   this.store.appState.timerHours = 0;
+  //   this.store.appState.timerMinutes = 50;
+  //   this.store.appState.timerSeconds = 0;
+  //
+  //   this.store.appState.timerIsFinished = false;
+  //   this.store.appState.timerIsRunning = false;
+  //   this.store.appState.timerIsStopped = false;
+  //   this.timer = 0;
+  // }
 
   renderButtons() {
     if (!this.store.appState.timerIsStopped) {
@@ -237,23 +241,23 @@ export default class Session extends Component {
               {this.renderButtons()}
             </div>
 
-            <div className={classNames('session__presets mt-5', this.store.appState.timerIsRunning && 'hidden')}>
+            {/* <div className={classNames('session__presets mt-5', this.store.appState.timerIsRunning && 'hidden')}>
               <h5 className='h6 mt-1 text--light'>You can also use one of these presets:</h5>
 
               <ul className='list-unstyled text--light'>
                 <li>
-                  <Button className='btn btn-primary' onClick={this.usePresetFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 5 mins</span>} />
+                  <Button className='btn btn--primary' onClick={this.usePresetFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 5 mins</span>} />
                 </li>
 
                 <li>
-                  <Button className='btn btn-primary' onClick={this.usePresetTwentyFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 25 mins</span>} />
+                  <Button className='btn btn--primary' onClick={this.usePresetTwentyFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 25 mins</span>} />
                 </li>
 
                 <li>
-                  <Button className='btn btn-primary' onClick={this.usePresetFifty} title={<span><span className='fa fa-bolt'></span> 50 mins</span>} />
+                  <Button className='btn btn--primary' onClick={this.usePresetFifty} title={<span><span className='fa fa-bolt'></span> 50 mins</span>} />
                 </li>
               </ul>
-            </div>
+            </div> */}
   				</div>
 				</main>
 			</div>
