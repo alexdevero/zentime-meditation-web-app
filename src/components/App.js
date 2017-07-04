@@ -57,9 +57,17 @@ export default class App extends Component {
 
 				<Route
 					exact
-					path='/about' // for production: /labs/zentime/about
+					path='/why' // for production: /labs/zentime/about
 					render={props => (
-						<LazyRoute {...props} component={import('./About')} />
+						<LazyRoute {...props} component={import('./Why')} />
+					)}
+				/>
+
+				<Route
+					exact
+					path='/how' // for production: /labs/zentime/about
+					render={props => (
+						<LazyRoute {...props} component={import('./How')} />
 					)}
 				/>
 
