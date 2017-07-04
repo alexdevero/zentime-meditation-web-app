@@ -6,7 +6,7 @@ import Button from './ui/Button';
 
 @inject('store')
 @observer
-export default class Home extends Component {
+export default class Why extends Component {
 	constructor(props) {
 		super(props);
 
@@ -17,7 +17,7 @@ export default class Home extends Component {
 		const store = this.store;
 
 		return (
-			<div className='page about'>
+			<div className='page why'>
 				<main>
           <div className="container">
             <div className="row">

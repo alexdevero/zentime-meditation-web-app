@@ -6,7 +6,7 @@ import Button from './ui/Button';
 
 @inject('store')
 @observer
-export default class Howto extends Component {
+export default class How extends Component {
   constructor(props) {
     super(props);
 
@@ -17,7 +17,7 @@ export default class Howto extends Component {
     const store = this.store;
 
     return(
-      <div className='page howto'>
+      <div className='page how'>
         <main>
           <div className="container">
             <div className="row">
