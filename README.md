@@ -1,3 +1,8 @@
+<!-- [![Build Status](https://circleci.com/gh/alexdevero/zentime-meditation-web-app.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/zentime-meditation-web-app/) -->
+[![Dependency Status](https://david-dm.org/alexdevero/zentime-meditation-web-app.svg?style=flat)](https://david-dm.org/alexdevero/zentime-meditation-web-app)
+[![devDependency Status](https://david-dm.org/alexdevero/zentime-meditation-web-app/dev-status.svg?style=flat)](https://david-dm.org/alexdevero/zentime-meditation-web-app?type=dev)
+[![Built by DEVERO](https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320)](https://alexdevero.com)
+
 # ZenTime Meditation Web App
 Simple meditation timer web app based on [react-mobx-react-router4-boilerplate](https://github.com/mhaagens/react-mobx-react-router4-boilerplate), built with [React](https://facebook.github.io/react), [React-Router 4](https://github.com/reacttraining/react-router), [MobX](https://mobxjs.github.io/mobx) & [Webpack 2](https://webpack.js.org/).
 
