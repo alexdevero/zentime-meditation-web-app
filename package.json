@@ -78,7 +78,7 @@
     "mobx-react-router": "^4.0.1",
     "moment": "^2.18.1",
     "package": "^1.0.1",
-    "postcss-cssnext": "^2.11.0",
+    "postcss-cssnext": "^3.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
