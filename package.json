@@ -39,7 +39,7 @@
   "homepage": "",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.1",
+    "babel-loader": "^7.1.2",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.26.0",
@@ -66,7 +66,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "css-declaration-sorter": "^2.0.1",
+    "css-declaration-sorter": "^2.1.0",
     "css-mqpacker": "^6.0.1",
     "faker": "^4.1.0",
     "file-loader": "^0.11.2",
@@ -81,7 +81,7 @@
     "postcss-cssnext": "^3.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.2",
+    "react-router-dom": "^4.2.2",
     "rfx-core": "^1.5.3",
     "whatwg-fetch": "^2.0.3"
   }
