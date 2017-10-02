@@ -69,7 +69,7 @@
     "css-declaration-sorter": "^2.1.0",
     "css-mqpacker": "^6.0.1",
     "faker": "^4.1.0",
-    "file-loader": "^0.11.2",
+    "file-loader": "^1.1.4",
     "http-server": "^0.10.0",
     "lazy-route": "^1.0.7",
     "mobx": "^3.3.0",
