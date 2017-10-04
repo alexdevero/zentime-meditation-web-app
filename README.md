@@ -1,7 +1,10 @@
-<!-- [![Build Status](https://circleci.com/gh/alexdevero/zentime-meditation-web-app.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/zentime-meditation-web-app/) -->
-[![Dependency Status](https://david-dm.org/alexdevero/zentime-meditation-web-app.svg?style=flat)](https://david-dm.org/alexdevero/zentime-meditation-web-app)
-[![devDependency Status](https://david-dm.org/alexdevero/zentime-meditation-web-app/dev-status.svg?style=flat)](https://david-dm.org/alexdevero/zentime-meditation-web-app?type=dev)
-[![Built by DEVERO](https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320)](https://alexdevero.com)
+<p align="center">
+  <a href="https://david-dm.org/alexdevero/zentime-meditation-web-app"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/zentime-meditation-web-app.svg?style=flat"></a>
+  <a href="https://david-dm.org/alexdevero/zentime-meditation-web-app?type=dev"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/zentime-meditation-web-app/dev-status.svg?style=flat"></a>
+  <a href="https://alexdevero.com"><img alt="Built by DEVERO" src="https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320"></a>
+  <a href="http://opensource.org/licenses/MIT"><img alt="MIT License" src="https://img.shields.io/npm/l/express.svg"></a>
+  <a href="#"><img alt="Downloads last year" src="https://img.shields.io/github/release/alexdevero/zentime-meditation-web-app.svg"></a>
+</p>
 
 ## ZenTime Meditation Web App - Meditation as easy as pushing a button
 
