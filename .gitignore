@@ -1,7 +1,6 @@
 # Development folders and files #
 #################################
 .tmp/
-_ignore/
 dist/
 node_modules/
 
@@ -11,8 +10,7 @@ Desktop.ini
 
 # Folders for inspiration & notes #
 ###################################
-_moodboard/
-_notes/
+_ignore/
 
 # Log files & folders #
 #######################
