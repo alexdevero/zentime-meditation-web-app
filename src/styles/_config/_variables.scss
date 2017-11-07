@@ -6,8 +6,11 @@ $colors: (
   blue-light: #4fc3f7,
   green: #00eb79,
   green-light: #00ff83,
+  pink: #b24592, // fallback for gradient
   red: #f44336,
   red-light: #f77066
 );
 
 $radius: remy(35px);
+
+$gradient: linear-gradient(to left, #b24592, #f15f79);
