@@ -84,7 +84,7 @@ export default class Presets extends Component {
 				    <div className='row'>
 				      <div className='col-md-6 push-md-3'>
 				        <div className='presets__presets'>
-                  <div className="icon-stopwatch"></div>
+                  <div className="icon icon--stopwatch"></div>
 
                   <h4 className='h4 text-center'>Presets to help you start</h4>
 

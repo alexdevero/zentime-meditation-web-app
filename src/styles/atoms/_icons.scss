@@ -1,0 +1,24 @@
+// Icons
+
+.icon {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: remy(96px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: remy(135px) remy(135px);
+}
+
+.icon--zentime-logo {
+  margin-bottom: remy(32px);
+  // background: url(lotus-flower.svg);
+  // background: url(lotus-flower-outline-colored.svg);
+  // background: url(yin-yang-symbol.svg);
+  background-image: url(lotus-flower-green.svg);
+  // opacity: .5;
+}
+
+.icon--stopwatch {
+  background-image: url(icon-stopwatch.svg);
+}
