@@ -50,12 +50,12 @@
     &,
     &:not([href]):not([tabindex]) {
       color: #fff;
-      background: map-get($colors, blue);
+      background: $gradient;
 
       &:focus,
       &:hover {
         color: #fff;
-        background: map-get($colors, blue-light);
+        background: $gradient;
       }
     }
   }
