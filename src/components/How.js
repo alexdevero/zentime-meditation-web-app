@@ -22,6 +22,8 @@ export default class How extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-8 push-md-2">
+                <div className='icon icon--water-drop mt-5 mb-5'></div>
+
                 <h1 className='h3 mt-4'>How to Do Mindful Meditation</h1>
 
                 <p>Mindful meditation is a great way to increase focus, decrease stress, and stimulate your creativity. Learning how to do mindful meditation takes some time and practice, but you can teach yourself how to do it. You can also learn how to incorporate mindfulness techniques into your everyday life, such as when you are eating, walking, or going about your other daily tasks. These simple steps will help you get started.</p>

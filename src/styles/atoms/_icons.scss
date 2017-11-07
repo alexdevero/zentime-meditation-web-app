@@ -10,6 +10,19 @@
   background-size: remy(135px) remy(135px);
 }
 
+.icon--mind {
+  background-image: url(icon-mind.svg);
+}
+
+.icon--stopwatch {
+  background-image: url(icon-stopwatch.svg);
+}
+
+.icon--water-drop {
+  background-image: url(icon-water-drop.svg);
+  background-size: remy(112px) remy(119px);
+}
+
 .icon--zentime-logo {
   margin-bottom: remy(32px);
   // background: url(lotus-flower.svg);
@@ -17,12 +30,4 @@
   // background: url(yin-yang-symbol.svg);
   background-image: url(lotus-flower-green.svg);
   // opacity: .5;
-}
-
-.icon--mind {
-  background-image: url(icon-mind.svg);
-}
-
-.icon--stopwatch {
-  background-image: url(icon-stopwatch.svg);
 }
