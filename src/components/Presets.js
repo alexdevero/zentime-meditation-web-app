@@ -82,11 +82,13 @@ export default class Presets extends Component {
 				<main className='main--centered'>
 				  <div className='container'>
 				    <div className='row'>
-				      <div className='col-md-6 push-md-3 col-lg-4 push-lg-4'>
+				      <div className='col-md-6 push-md-3'>
 				        <div className='presets__presets'>
-                  <h4 className='h4'></h4>
+                  <div className="icon-stopwatch"></div>
 
-                  <h5 className='h6 mt-3 mb-5 text-center text--light'>Not sure how long should your meditation session be? No problem! Here are some presets to help you get started.</h5>
+                  <h4 className='h4 text-center'>Presets to help you start</h4>
+
+                  <p className='mt-4 mb-4 text-center'>Not sure how long should your meditation session be? No problem! Here are some presets to help you get started.</p>
 
                   <ul className='list-unstyled text--light'>
                     <li>

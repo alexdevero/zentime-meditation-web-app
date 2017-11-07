@@ -1,5 +1,19 @@
 // Presets
 
+.presets {
+  .icon-stopwatch {
+    display: block;
+    overflow: hidden;
+    margin-bottom: remy(24px);
+    width: 100%;
+    height: remy(96px);
+    background: url(icon-stopwatch.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: remy(135px) remy(135px);
+  }
+}
+
 .presets__presets {
   ul {
     display: flex;
