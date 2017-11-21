@@ -1,6 +1,6 @@
 {
   "name": "meditation-web-app",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple meditation timer web app built with React.js and mobX.",
   "main": "webpack.config.js",
   "engines": {
