@@ -10,14 +10,14 @@
 
   h1 {
     font-weight: 400;
-    color: #000;
+    color: $gradient-purple-fallback;
   }
 
   h4 {
-    margin-bottom: remy(10px);
+    margin-bottom: remy(24px);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: rgba(#000, .5);
+    color: rgba(0, 0 , 0, .75);
   }
 
   @media screen and (max-width: 768px) {
