@@ -8,11 +8,11 @@
     color: rgba(#000, .5);
 
     &:hover {
-      color: rgba(#000, 1);
+      color: $gradient-purple-fallback;
     }
   }
 
   a.active {
-    color: rgba(#000, 1);
+    color: $gradient-purple-fallback;
   }
 }
