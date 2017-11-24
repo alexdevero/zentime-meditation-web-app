@@ -81,17 +81,17 @@ export default class Presets extends Component {
                   <ul className='list-unstyled text--light'>
                     <li>
                       <Button className={classNames('preset', this.store.appState.presetFiveSet && 'preset--active')} onClick={this.usePresetFive} title={<span>
-                        <span>5</span><span>mins</span></span>} />
+                        <span className='preset__time'>5</span><span className='preset__unit'>mins</span></span>} />
                     </li>
 
                     <li>
                       <Button className={classNames('preset', this.store.appState.presetTwentyFiveSet && 'preset--active')} onClick={this.usePresetTwentyFive} title={<span>
-                        <span>25</span><span>mins</span></span>} />
+                        <span className='preset__time'>25</span><span className='preset__unit'>mins</span></span>} />
                     </li>
 
                     <li>
                       <Button className={classNames('preset', this.store.appState.presetFiftySet && 'preset--active')} onClick={this.usePresetFifty} title={<span>
-                        <span>50</span><span>mins</span></span>} />
+                        <span className='preset__time'>50</span><span className='preset__unit'>mins</span></span>} />
                     </li>
                   </ul>
 
