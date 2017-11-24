@@ -31,10 +31,6 @@ export default class Presets extends Component {
     this.store.appState.presetTwentyFiveSet = false;
     this.store.appState.presetFiftySet = false;
 
-    // this.store.appState.timerIsFinished = false;
-    // this.store.appState.timerIsRunning = false;
-    // this.store.appState.timerIsStopped = false;
-    // this.timer = 0;
     console.log(`seconds: ${this.store.appState.timerSeconds}, minutes: ${this.store.appState.timerMinutes}, hours: ${this.store.appState.timerHours}`);
   }
 
@@ -50,10 +46,6 @@ export default class Presets extends Component {
     this.store.appState.presetTwentyFiveSet = true;
     this.store.appState.presetFiftySet = false;
 
-    // this.store.appState.timerIsFinished = false;
-    // this.store.appState.timerIsRunning = false;
-    // this.store.appState.timerIsStopped = false;
-    // this.timer = 0;
     console.log(`seconds: ${this.store.appState.timerSeconds}, minutes: ${this.store.appState.timerMinutes}, hours: ${this.store.appState.timerHours}`);
   }
 
@@ -69,10 +61,6 @@ export default class Presets extends Component {
     this.store.appState.presetTwentyFiveSet = false;
     this.store.appState.presetFiftySet = true;
 
-    // this.store.appState.timerIsFinished = false;
-    // this.store.appState.timerIsRunning = false;
-    // this.store.appState.timerIsStopped = false;
-    // this.timer = 0;
     console.log(`seconds: ${this.store.appState.timerSeconds}, minutes: ${this.store.appState.timerMinutes}, hours: ${this.store.appState.timerHours}`);
   }
 

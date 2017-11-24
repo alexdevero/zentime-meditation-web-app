@@ -20,13 +20,13 @@ export default class Subitem extends Component {
     return (
       <div className='page post'>
         <Link to='/posts'>← Back to Posts</Link>
+
         {!!item &&
           <article>
             <h1>{item.title}</h1>
 
             <p>{item.body}</p>
           </article>}
-
       </div>
     );
   }

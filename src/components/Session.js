@@ -22,10 +22,6 @@ export default class Session extends Component {
 
     this.playBellSound = this.playBellSound.bind(this);
 
-    // this.usePresetFive = this.usePresetFive.bind(this);
-    // this.usePresetTwentyFive = this.usePresetTwentyFive.bind(this);
-    // this.usePresetFifty = this.usePresetFifty.bind(this);
-
     this.store = this.props.store;
   }
 
@@ -130,45 +126,6 @@ export default class Session extends Component {
     bellSoundFile.play();
   }
 
-  // usePresetFive() {
-  //   console.log('Preset 5');
-  //
-  //   this.store.appState.timerHours = 0;
-  //   this.store.appState.timerMinutes = 5;
-  //   this.store.appState.timerSeconds = 0;
-  //
-  //   this.store.appState.timerIsFinished = false;
-  //   this.store.appState.timerIsRunning = false;
-  //   this.store.appState.timerIsStopped = false;
-  //   this.timer = 0;
-  // }
-  //
-  // usePresetTwentyFive() {
-  //   console.log('Preset 25');
-  //
-  //   this.store.appState.timerHours = 0;
-  //   this.store.appState.timerMinutes = 25;
-  //   this.store.appState.timerSeconds = 0;
-  //
-  //   this.store.appState.timerIsFinished = false;
-  //   this.store.appState.timerIsRunning = false;
-  //   this.store.appState.timerIsStopped = false;
-  //   this.timer = 0;
-  // }
-  //
-  // usePresetFifty() {
-  //   console.log('Preset 50');
-  //
-  //   this.store.appState.timerHours = 0;
-  //   this.store.appState.timerMinutes = 50;
-  //   this.store.appState.timerSeconds = 0;
-  //
-  //   this.store.appState.timerIsFinished = false;
-  //   this.store.appState.timerIsRunning = false;
-  //   this.store.appState.timerIsStopped = false;
-  //   this.timer = 0;
-  // }
-
   renderButtons() {
     if (!this.store.appState.timerIsStopped) {
       return <Button className={classNames('btn btn--round', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? <span className='fa fa-play'></span> : <span className='fa fa-pause'></span>} />
@@ -204,14 +161,6 @@ export default class Session extends Component {
           <div className='home__hero'>
             <h4 className={classNames('h4', this.store.appState.timerIsRunning && 'hidden')}>Set the duration of your session.</h4>
 
-            {/* <ul className='session__presets list-unstyled text--light'>
-              <li><a onClick={this.usePresetFive}>5 mins</a></li>
-
-              <li><a onClick={this.usePresetTwentyFive}>25 mins</a></li>
-
-              <li><a onClick={this.usePresetFifty}>50 mins</a></li>
-            </ul> */}
-
             <div className={classNames('session-timer form-inline', this.store.appState.timerIsRunning && 'hidden')}>
               <div className='session-timer__input'>
                 <Input value={this.store.appState.timerHours} onChange={this.updateTimer.bind(this)} className='form-control' name='timer-hours' type='text' />
@@ -240,24 +189,6 @@ export default class Session extends Component {
             <div>
               {this.renderButtons()}
             </div>
-
-            {/* <div className={classNames('session__presets mt-5', this.store.appState.timerIsRunning && 'hidden')}>
-              <h5 className='h6 mt-1 text--light'>You can also use one of these presets:</h5>
-
-              <ul className='list-unstyled text--light'>
-                <li>
-                  <Button className='btn btn--primary' onClick={this.usePresetFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 5 mins</span>} />
-                </li>
-
-                <li>
-                  <Button className='btn btn--primary' onClick={this.usePresetTwentyFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 25 mins</span>} />
-                </li>
-
-                <li>
-                  <Button className='btn btn--primary' onClick={this.usePresetFifty} title={<span><span className='fa fa-bolt'></span> 50 mins</span>} />
-                </li>
-              </ul>
-            </div> */}
           </div>
         </main>
       </div>
