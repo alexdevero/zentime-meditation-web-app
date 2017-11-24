@@ -73,3 +73,29 @@
     }
   }
 }
+
+.preset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    color: map-get($colors, green);
+    border-color: map-get($colors, green);
+  }
+
+  &--active {
+    border-color: map-get($colors, green);
+
+    &,
+    &:hover {
+      color: map-get($colors, green);
+    }
+  }
+}

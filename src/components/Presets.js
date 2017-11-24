@@ -92,15 +92,18 @@ export default class Presets extends Component {
 
                   <ul className='list-unstyled text--light'>
                     <li>
-                      <Button className={classNames('btn btn--primary', this.store.appState.presetFiveSet && 'btn--secondary')} onClick={this.usePresetFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 5 mins</span>} />
+                      <Button className={classNames('preset', this.store.appState.presetFiveSet && 'preset--active')} onClick={this.usePresetFive} title={<span>
+                        <span>5</span><span>mins</span></span>} />
                     </li>
 
                     <li>
-                      <Button className={classNames('btn btn--primary', this.store.appState.presetTwentyFiveSet && 'btn--secondary')} onClick={this.usePresetTwentyFive} title={<span><span className='fa fa-bolt'></span><span className='fa fa-bolt'></span> 25 mins</span>} />
+                      <Button className={classNames('preset', this.store.appState.presetTwentyFiveSet && 'preset--active')} onClick={this.usePresetTwentyFive} title={<span>
+                        <span>25</span><span>mins</span></span>} />
                     </li>
 
                     <li>
-                      <Button className={classNames('btn btn--primary', this.store.appState.presetFiftySet && 'btn--secondary')} onClick={this.usePresetFifty} title={<span><span className='fa fa-bolt'></span> 50 mins</span>} />
+                      <Button className={classNames('preset', this.store.appState.presetFiftySet && 'preset--active')} onClick={this.usePresetFifty} title={<span>
+                        <span>50</span><span>mins</span></span>} />
                     </li>
                   </ul>
 
