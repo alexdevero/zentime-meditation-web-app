@@ -27,7 +27,7 @@ export default class Home extends Component {
   					</div>
 
   					<div className='hero__content'>
-  						<h4>A simple meditation timer to help you practice meditation.</h4>
+  						<h4>Meditation practice made simple.</h4>
 
               <Link className='btn btn--primary mt-2' to='/session'>Start your session</Link> {/* for prodution use to='/labs/zentime/session' */}
   					</div>
