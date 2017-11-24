@@ -2,23 +2,21 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
-import Button from './ui/Button';
-
 @inject('store')
 @observer
 export default class Why extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.store = this.props.store;
-	}
+    this.store = this.props.store;
+  }
 
-	render() {
-		const store = this.store;
+  render() {
+    const store = this.store;
 
-		return (
-			<div className='page why'>
-				<main>
+    return (
+      <div className='page why'>
+        <main>
           <div className="container">
             <div className="row">
               <div className="col-md-8 push-md-2">
@@ -88,8 +86,8 @@ export default class Why extends Component {
               </div>
             </div>
           </div>
-				</main>
-			</div>
-		);
-	}
+        </main>
+      </div>
+    );
+  }
 }

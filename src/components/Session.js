@@ -12,8 +12,8 @@ import bellSound from '../sounds/bell-tone.mp3';
 @inject('store')
 @observer
 export default class Session extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
@@ -26,8 +26,8 @@ export default class Session extends Component {
     // this.usePresetTwentyFive = this.usePresetTwentyFive.bind(this);
     // this.usePresetFifty = this.usePresetFifty.bind(this);
 
-		this.store = this.props.store;
-	}
+    this.store = this.props.store;
+  }
 
   componentDidMount() {
     console.log(`seconds: ${this.store.appState.timerSeconds}, minutes: ${this.store.appState.timerMinutes}, hours: ${this.store.appState.timerHours}`);
@@ -195,14 +195,14 @@ export default class Session extends Component {
     }
   }
 
-	render() {
-		const store = this.store;
+  render() {
+    const store = this.store;
 
-		return (
-			<div className='page session'>
-				<main className='main--centered'>
-  				<div className='home__hero'>
-						<h4 className={classNames('h4', this.store.appState.timerIsRunning && 'hidden')}>Set the duration of your session.</h4>
+    return (
+      <div className='page session'>
+        <main className='main--centered'>
+          <div className='home__hero'>
+            <h4 className={classNames('h4', this.store.appState.timerIsRunning && 'hidden')}>Set the duration of your session.</h4>
 
             {/* <ul className='session__presets list-unstyled text--light'>
               <li><a onClick={this.usePresetFive}>5 mins</a></li>
@@ -258,9 +258,9 @@ export default class Session extends Component {
                 </li>
               </ul>
             </div> */}
-  				</div>
-				</main>
-			</div>
-		);
-	}
+          </div>
+        </main>
+      </div>
+    );
+  }
 }

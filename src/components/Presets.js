@@ -10,14 +10,14 @@ import Button from './ui/Button';
 @observer
 export default class Presets extends Component {
   constructor(props) {
-		super(props);
+    super(props);
 
     this.usePresetFive = this.usePresetFive.bind(this);
     this.usePresetTwentyFive = this.usePresetTwentyFive.bind(this);
     this.usePresetFifty = this.usePresetFifty.bind(this);
 
-		this.store = this.props.store;
-	}
+    this.store = this.props.store;
+  }
 
   usePresetFive() {
     console.log('Preset 5');
@@ -76,14 +76,14 @@ export default class Presets extends Component {
     console.log(`seconds: ${this.store.appState.timerSeconds}, minutes: ${this.store.appState.timerMinutes}, hours: ${this.store.appState.timerHours}`);
   }
 
-	render() {
-		return (
-			<div className='page presets'>
-				<main className='main--centered'>
-				  <div className='container'>
-				    <div className='row'>
-				      <div className='col-md-6 push-md-3'>
-				        <div className='presets__presets'>
+  render() {
+    return (
+      <div className='page presets'>
+        <main className='main--centered'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-md-6 push-md-3'>
+                <div className='presets__presets'>
                   <div className="icon icon--stopwatch"></div>
 
                   <h4 className='h4 text-center'>Presets to help you start</h4>
@@ -111,11 +111,11 @@ export default class Presets extends Component {
                     <Link className='btn btn--primary' to='/session'>Go to timer</Link> {/* for prodution use to='/labs/zentime/session' */}
                   </div>
                 </div>
-				      </div>
-				    </div>
-				  </div>
-				</main>
-			</div>
-		);
-	}
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
 }

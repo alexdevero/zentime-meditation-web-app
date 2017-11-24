@@ -11,13 +11,13 @@ import Input from './ui/Input';
 @observer
 export default class Register extends Component {
   constructor(props) {
-		super(props);
+    super(props);
 
     this.showPassword = this.showPassword.bind(this);
     this.createAccount = this.createAccount.bind(this);
 
-		this.store = this.props.store;
-	}
+    this.store = this.props.store;
+  }
 
   showPassword() {
     const passwordInput = document.querySelector('.input-password');
@@ -61,15 +61,15 @@ export default class Register extends Component {
     }
   }
 
-	render() {
-		return (
-			<div className='page register'>
-				<main className='main--centered'>
-				  <div className='container'>
-				    <div className={classNames('row', this.store.appState.accountCreated && 'hidden')}>
-				      <div className='col-md-6 push-md-3 col-lg-4 push-lg-4'>
-				        <div className={this.store.appState.accountCreated && 'hidden'}>
-				          <h1 className='h3 text--light'>Create your account</h1>
+  render() {
+    return (
+      <div className='page register'>
+        <main className='main--centered'>
+          <div className='container'>
+            <div className={classNames('row', this.store.appState.accountCreated && 'hidden')}>
+              <div className='col-md-6 push-md-3 col-lg-4 push-lg-4'>
+                <div className={this.store.appState.accountCreated && 'hidden'}>
+                  <h1 className='h3 text--light'>Create your account</h1>
 
                   <hr className='divider' />
 
@@ -94,9 +94,9 @@ export default class Register extends Component {
                       <Button className='btn btn--primary' onClick={this.createAccount} title='Create new account' />
                     </fieldset>
                   </form>
-				        </div>
-				      </div>
-				    </div>
+                </div>
+              </div>
+            </div>
 
             <div className={classNames('row text-center', !this.store.appState.accountCreated && 'hidden')}>
               <div className="col-md-6 push-md-3">
@@ -109,9 +109,9 @@ export default class Register extends Component {
                 <Link className='home-cta' to='/session'>Start your first session!</Link>
               </div>
             </div>
-				  </div>
-				</main>
-			</div>
-		);
-	}
+          </div>
+        </main>
+      </div>
+    );
+  }
 }

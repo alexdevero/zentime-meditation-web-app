@@ -8,29 +8,27 @@ import Nav from './Nav';
 @inject('store')
 @observer
 export default class Header extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.store = this.props.store.appState;
-	}
+    this.store = this.props.store.appState;
+  }
 
-	authenticate(e) {
-		if (e) e.preventDefault();
+  authenticate(e) {
+    if (e) e.preventDefault();
 
-		console.log('CLICKED BUTTON');
+    this.store.authenticate();
+  }
 
-		this.store.authenticate();
-	}
+  render() {
+    const { authenticated } = this.store;
 
-	render() {
-		const { authenticated } = this.store;
-
-		return (
-			<header className='header'>
-				<Nav location={this.props.location} />
+    return (
+      <header className='header'>
+        <Nav location={this.props.location} />
 
         {/* <a onClick={this.authenticate.bind(this)}>{authenticated ? 'Log out' : 'Sign in'}</a> */}
-			</header>
-		);
-	}
+      </header>
+    );
+  }
 }

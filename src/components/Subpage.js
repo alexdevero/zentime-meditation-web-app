@@ -9,42 +9,42 @@ import DataWrapper from './DataWrapper';
 @DataWrapper
 @observer
 export default class SubPage extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.store = this.props.store;
-	}
-	render() {
-		const { items } = this.store.appState;
+    this.store = this.props.store;
+  }
+  render() {
+    const { items } = this.store.appState;
 
-		return (
-			<div className='page posts'>
-				<h1>Presets</h1>
+    return (
+      <div className='page posts'>
+        <h1>Presets</h1>
 
-				<p className='subheader'>
-					Some presets you can use to start your meditation session.
-				</p>
+        <p className='subheader'>
+          Some presets you can use to start your meditation session.
+        </p>
 
-				<hr />
+        <hr />
 
-				<ul>
-					{items && items.length
-						? items.slice(6, 12).map(post => {
-								return (
-									<li key={post.id}>
-										<Link
-											to={`${this.props.match.path}/${post.id}`}
-										>
-											<h1>{post.title}</h1>
-										</Link>
+        <ul>
+          {items && items.length
+            ? items.slice(6, 12).map(post => {
+                return (
+                  <li key={post.id}>
+                    <Link
+                      to={`${this.props.match.path}/${post.id}`}
+                    >
+                      <h1>{post.title}</h1>
+                    </Link>
 
-										<p>{post.body.substring(0, 120)}</p>
-									</li>
-								);
-							})
-						: 'Loading...'}
-				</ul>
-			</div>
-		);
-	}
+                    <p>{post.body.substring(0, 120)}</p>
+                  </li>
+                );
+              })
+            : 'Loading...'}
+        </ul>
+      </div>
+    );
+  }
 }

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
-import Button from './ui/Button';
-
 @inject('store')
 @observer
 export default class How extends Component {

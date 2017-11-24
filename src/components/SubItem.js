@@ -9,25 +9,25 @@ import Protected from './Protected';
 @Protected
 @observer
 export default class Subitem extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.store = this.props.store;
-	}
-	render() {
-		const { item } = this.store.appState;
+    this.store = this.props.store;
+  }
+  render() {
+    const { item } = this.store.appState;
 
-		return (
-			<div className='page post'>
-				<Link to='/posts'>← Back to Posts</Link>
-				{!!item &&
-					<article>
-						<h1>{item.title}</h1>
+    return (
+      <div className='page post'>
+        <Link to='/posts'>← Back to Posts</Link>
+        {!!item &&
+          <article>
+            <h1>{item.title}</h1>
 
-						<p>{item.body}</p>
-					</article>}
+            <p>{item.body}</p>
+          </article>}
 
-			</div>
-		);
-	}
+      </div>
+    );
+  }
 }
