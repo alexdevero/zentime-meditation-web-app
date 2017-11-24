@@ -65,10 +65,10 @@ a {
   @include transition(color);
 
   &:hover {
-    color: rgba(map-get($colors, blue), .75);
+    color: $gradient-purple-fallback;
   }
 
   &.active {
-    color: rgba(map-get($colors, blue), .5);
+    color: $gradient-purple-fallback;
   }
 }

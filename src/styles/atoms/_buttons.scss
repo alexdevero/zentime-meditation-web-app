@@ -48,15 +48,11 @@
 
   &--primary {
     &,
-    &:not([href]):not([tabindex]) {
+    &:not([href]):not([tabindex]),
+    &:hover {
       color: #fff;
-      background: $gradient;
-
-      &:focus,
-      &:hover {
-        color: #fff;
-        background: $gradient;
-      }
+      background: $gradient-purple-fallback;
+      background-image: $gradient-purple;
     }
   }
 
