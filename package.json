@@ -48,6 +48,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "bootstrap": "4.0.0-alpha.6",
     "classnames": "^2.2.5",
+    "copy-webpack-plugin": "^4.2.3",
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
