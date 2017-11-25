@@ -85,7 +85,7 @@
   color: #888;
   border-radius: 50%;
   border: 1px solid #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
   transition: all .25s ease-in-out;
 
   &:hover,
@@ -93,6 +93,7 @@
   &--active:hover {
     color: $gradient-purple-fallback;
     border-color: $gradient-purple-fallback;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, .25);
   }
 }
 
