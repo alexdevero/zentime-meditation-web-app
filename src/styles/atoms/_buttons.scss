@@ -34,15 +34,21 @@
 
   &--danger {
     &,
-    &:not([href]):not([tabindex]) {
+    &:not([href]):not([tabindex]),
+    &:hover {
       color: #fff;
-      background: map-get($colors, red);
+      background: $gradient-red-fallback;
+      background-image: $gradient-red;
+    }
 
-      &:focus,
-      &:hover {
-        color: #fff;
-        background: map-get($colors, red-light);
-      }
+    &,
+    &:not([href]):not([tabindex]) {
+      box-shadow: 0 10px 40px rgba(238, 9, 121, .3);
+    }
+
+    &:not([href]):not([tabindex]):hover,
+    &:hover {
+      box-shadow: 0 10px 50px rgba(238, 9, 121, .5);
     }
   }
 
@@ -62,7 +68,7 @@
 
     &:not([href]):not([tabindex]):hover,
     &:hover {
-      box-shadow: 0 10px 50px rgba(123,22,255, 0.5);
+      box-shadow: 0 10px 50px rgba(123, 22, 255, .5);
     }
   }
 

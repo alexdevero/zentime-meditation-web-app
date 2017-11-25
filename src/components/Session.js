@@ -128,7 +128,7 @@ export default class Session extends Component {
 
   renderButtons() {
     if (!this.store.appState.timerIsStopped) {
-      return <Button className={classNames('btn btn--round', !this.store.appState.timerIsRunning ? 'btn btn--secondary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? <span className='fa fa-play'></span> : <span className='fa fa-pause'></span>} />
+      return <Button className={classNames('btn btn--round', !this.store.appState.timerIsRunning ? 'btn btn--primary' : 'btn btn--danger')} onClick={this.startTimer} title={!this.store.appState.timerIsRunning ? <span className='fa fa-play'></span> : <span className='fa fa-pause'></span>} />
     } else {
       return <Button className='btn btn--round btn--primary' onClick={this.restartTimer} title={<span className='fa fa-play'></span>} />
     }
