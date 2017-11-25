@@ -32,6 +32,8 @@ export default class Nav extends Component {
 
         <ActiveLink activeOnlyWhenExact={true} to='/presets'>Presets</ActiveLink>{/* for prodution use to='/labs/zentime/presets' */}
 
+        <ActiveLink activeOnlyWhenExact={true} to='/session'>Session</ActiveLink>{/* for prodution use to='/labs/zentime/presets' */}
+
         {/* <ActiveLink activeOnlyWhenExact={true} to='/register'>Register</ActiveLink> */}
 
         {/* {authenticated && <ActiveLink to='/posts'>Presets</ActiveLink>} */}
