@@ -1,18 +1,40 @@
 .nav {
   display: flex;
-  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
 
   a {
+    position: relative;
     margin-right: remy(24px);
     font-weight: 500;
     color: rgba(#000, .5);
 
+    &::before {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      content: '';
+      width: 0;
+      height: 2px;
+      background: $gradient-purple-fallback;
+      transition: width .25s ease-in-out;
+    }
+
     &:hover {
       color: $gradient-purple-fallback;
+
+      &::before {
+        width: 100%
+      }
     }
   }
 
   a.active {
     color: $gradient-purple-fallback;
+
+    &::before {
+      width: 100%;
+    }
   }
 }
