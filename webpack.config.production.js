@@ -1,7 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -115,6 +116,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: false,
       template: './index.hbs'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: './src/images/favicon',
+        to: 'images/favicon'
+      }
+    ])
   ]
-};
+}
