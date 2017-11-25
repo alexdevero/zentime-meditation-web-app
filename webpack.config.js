@@ -1,6 +1,7 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -99,9 +100,18 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
+    new CopyWebpackPlugin([
+      {
+        from: './src/images/favicon',
+        to: 'images/favicon'
+      }
+    ]),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({ hash: false, template: './index.hbs' }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/)
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: './index.hbs'
+    }),
+    new webpack.NamedModulesPlugin()
   ]
-};
+}
