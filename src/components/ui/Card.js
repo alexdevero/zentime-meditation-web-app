@@ -7,7 +7,7 @@ import { transitionDuration, transitionTiming } from './../common/variables'
 export const Card = styled.article`
   position: relative;
   width: 100%;
-  min-height: ${remy(320)};
+  min-height: ${remy(380)};
   cursor: pointer;
   perspective: 1000px;
   transition: ${transition()};
@@ -23,7 +23,6 @@ export const Card = styled.article`
     }
 
     & > div:last-of-type {
-      overflow-y: auto;
       transform: perspective(1000px) rotateY(0deg);
     }
   }
@@ -54,7 +53,7 @@ export const CardFront = styled.div`
 export const CardBack = styled.div`
   ${CardSide};
 
-  transform: perspective(1000px) rotateY(-180deg);
+  transform: rotateY(-180deg);
 `
 
 export const CardNumber = styled.span`
@@ -68,12 +67,4 @@ export const CardTitle = styled.h2`
 
 export const CardDescription = styled.span`
   font-size: ${remy(16)};
-
-  @media (min-width: 576px) and (max-width: 767px) {
-    font-size: ${remy(20)};
-  }
-
-  ${'' /* @media (min-width: 992px) {
-    font-size: ${remy(20)};
-  } */}
 `
