@@ -35,7 +35,7 @@ export default class How extends Component {
                 <p className='text-center'>Meditation helps increase focus, stimulate creativity and decrease stress. These simple steps will help you get started.</p>
 
                 <GridRow>
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>1.</CardNumber>
@@ -49,7 +49,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>2.</CardNumber>
@@ -63,7 +63,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>3.</CardNumber>
@@ -77,7 +77,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>4.</CardNumber>
@@ -91,7 +91,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>5.</CardNumber>
@@ -105,7 +105,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>6.</CardNumber>
@@ -119,7 +119,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>7.</CardNumber>
@@ -133,7 +133,7 @@ export default class How extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>8.</CardNumber>

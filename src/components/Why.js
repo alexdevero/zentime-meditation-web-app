@@ -34,7 +34,7 @@ export default class Why extends Component {
                 <p className='text-center'>Although the research on meditation isn’t as robust as nutrition or exercise, there is a reason why it’s been around for thousands of years. We’re just starting to get a better understanding of how beneficial it can be for many aspects of life, from disease and pain management, to sleep, to control of emotions. Here are 13 biggest benefits of meditation.</p>
 
                 <GridRow>
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>1.</CardNumber>
@@ -48,7 +48,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>2.</CardNumber>
@@ -62,7 +62,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>3.</CardNumber>
@@ -76,7 +76,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>4.</CardNumber>
@@ -90,7 +90,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>5.</CardNumber>
@@ -104,7 +104,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>6.</CardNumber>
@@ -118,7 +118,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>7.</CardNumber>
@@ -132,7 +132,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>8.</CardNumber>
@@ -146,7 +146,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>9.</CardNumber>
@@ -160,7 +160,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>10.</CardNumber>
@@ -174,7 +174,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>11.</CardNumber>
@@ -188,7 +188,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>12.</CardNumber>
@@ -202,7 +202,7 @@ export default class Why extends Component {
                     </Card>
                   </GridColumn>
 
-                  <GridColumn sm='6' md='4'>
+                  <GridColumn sm='6' lg='4'>
                     <Card onClick={this.flipCard.bind(this)}>
                       <CardFront>
                         <CardNumber>13.</CardNumber>
