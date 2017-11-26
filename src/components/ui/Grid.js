@@ -52,6 +52,9 @@ export const GridRow = styled.div`
 `
 
 export const GridColumn = styled.div`
+  padding-right: ${remy(15)};
+  padding-left: ${remy(15)};
+
   ${({ xs }) => (xs ? getFlex(xs) : 'flex: 0 0 100%')};
   ${({ xs }) => (xs ? getWidth(xs) : 'width: 100%')};
 
