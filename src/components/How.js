@@ -16,7 +16,6 @@ export default class How extends Component {
 
   flipCard(e) {
     e.currentTarget.classList.toggle('flipped')
-    console.log(e.currentTarget)
   }
 
   render() {
