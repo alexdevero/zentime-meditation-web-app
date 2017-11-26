@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
+import { inject, observer } from 'mobx-react'
 
-import { GridContainer, GridRow, GridColumn } from './ui/Grid'
 import { Card, CardSide, CardFront, CardBack, CardNumber, CardTitle, CardDescription } from './ui/Card'
+import { GridContainer, GridRow, GridColumn } from './ui/Grid'
 
 @inject('store')
 @observer
