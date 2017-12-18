@@ -1,4 +1,8 @@
-﻿<p align="center">
+<p align="center">
+  <img width=150 alt="ZenTime logo" src="/src/images/icon-lotus-colored-purple.svg">
+</p>
+
+<p align="center">
   <a href="https://david-dm.org/alexdevero/zentime-meditation-web-app"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/zentime-meditation-web-app.svg?style=flat"></a>
   <a href="https://david-dm.org/alexdevero/zentime-meditation-web-app?type=dev"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/zentime-meditation-web-app/dev-status.svg?style=flat"></a>
   <a href="http://opensource.org/licenses/MIT"><img alt="MIT License" src="https://img.shields.io/npm/l/express.svg"></a>
