@@ -89,6 +89,17 @@ module.exports = {
       }
     ]
   },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       commons: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         name: "vendors",
+  //         chunks: "all"
+  //       }
+  //     }
+  //   }
+  // },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -97,10 +108,6 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity
-    }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       compress: {
