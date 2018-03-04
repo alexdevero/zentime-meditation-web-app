@@ -9,9 +9,9 @@
     "yarn": ">=0.27.5"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production rimraf ./dist && webpack --config webpack.config.production.js",
-    "postinstall": "webpack --config ./webpack.config.production.js --display-error-details",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --mode development",
+    "build": "cross-env NODE_ENV=production rimraf ./dist && webpack --config webpack.config.production.js --mode production",
+    "postinstall": "webpack --config ./webpack.config.production.js --display-error-details --mode production",
     "preview": "cross-env NODE_ENV=preview http-server ./dist -p 1234 -c-1",
     "test": "cross-env NODE_ENV=test echo \"Error: no test specified\" && exit 1"
   },
