@@ -108,17 +108,6 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-        warnings: false,
-        drop_console: true,
-        screw_ie8: true
-      },
-      output: {
-        comments: false
-      }
-    }),
     new ExtractTextPlugin('assets/styles.css'),
     new HtmlWebpackPlugin({
       hash: false,
