@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
@@ -41,15 +41,13 @@ module.exports = {
       },
       {
         test: /\.scss|css$/i,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
+        use: [
+            MiniCssExtractPlugin.loader,
             { loader: 'css-loader', options: { sourceMap: true } },
             { loader: 'postcss-loader', options: { sourceMap: true } },
             { loader: 'resolve-url-loader' },
             { loader: 'sass-loader', options: { sourceMap: true } }
-          ]
-        })
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -108,7 +106,10 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new ExtractTextPlugin('assets/styles.css'),
+    new MiniCssExtractPlugin({
+      filename: 'assets/styles.css',
+      chunkFilename: '[id].css'
+    }),
     new HtmlWebpackPlugin({
       hash: false,
       template: './index.hbs'
