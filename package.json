@@ -58,7 +58,7 @@
     "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
     "postcss-loader": "^3.0.0",
-    "react-hot-loader": "4.3.6",
+    "react-hot-loader": "4.13.0",
     "resolve-url-loader": "^2.3.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
