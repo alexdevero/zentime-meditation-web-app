@@ -81,7 +81,7 @@
     "postcss-cssnext": "^3.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "^5.3.3",
     "rfx-core": "^1.6.0",
     "styled-components": "^3.4.6",
     "whatwg-fetch": "^2.0.4"
