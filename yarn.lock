@@ -5780,9 +5780,9 @@ mobx-react-devtools@^6.0.3:
   integrity sha512-PY+lG6XeWaC0DFnDaVC7ImrHJQu7XVXNy4z4fmqHzWc3p+fJisKmaZNwgToO2vJGBghz98Mx2yXUBLw1Ba2mPQ==
 
 mobx-react-router@^4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/mobx-react-router/-/mobx-react-router-4.0.5.tgz#5f270eebceb64c256bc2f3c6bde8c5d88e76819e"
-  integrity sha512-h3c+BOnCJFPOr4O7Fl6YQT8LXKXv3av9zXk4480BVIkiqJT4rTU4D4B/lmGLcjJA9NyqzlnN03wtlftg49xQmA==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/mobx-react-router/-/mobx-react-router-4.1.0.tgz#de014848207d8aa32f6a4e67ed861bd2cb6516e5"
+  integrity sha512-2knsbDqVorWLngZWbdO8tr7xcZXaLpVFsFlCaGaoyZ+EP9erVGRxnlWGqKyFObs3EH1JPLyTDOJ2LPTxb/lB6Q==
 
 mobx-react@^5.2.8:
   version "5.2.8"
